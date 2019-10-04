@@ -1,0 +1,592 @@
+2010-05-02 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Configuration
+
+	  - Fixed a problem with applet building (libgnutls detection)
+
+2009-06-17 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Configuration:
+
+	  - Fixed a problem with applet building.
+
+2009-04-08 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Version: 0.9
+
+	* Spy options:
+
+	  - Added group management for spies (task #409).
+
+2009-04-07 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Event actions:
+
+	  - Fixed a problem with E-Mail alert.
+
+
+2009-04-06 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI:
+
+	  - Fixed a problem with "View diff" button state.
+
+2008-05-22 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI:
+
+	  - It is now possible to reset all spies states at once.
+
+	* Other:
+
+	  - Fixed some gcc warnings.
+
+2007-02-11 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Version: 0.8.0
+
+	* Event actions:
+
+	  - Added ability to send E-Mails alerts when a event occure.
+
+	* Dependencies: 
+	
+	  - Added new dependency on libesmtp.
+
+2007-01-02 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Event actions:
+
+	  - Some work to trigger actions when a event occure (only GUI stuff for
+	    the moment).
+
+2006-12-15 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI:
+
+	  - Fixed a bug on spies selection.
+
+2006-12-12 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI:
+
+	  - Worked on spies selection smart interaction between panel and
+	    main tree view.
+
+2006-12-11 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Spy options:
+
+	  - Added possibility of insensitive/sensitive search for web page
+	    spies.
+
+	  - Added possibility to specify HTML section for content search (the
+	    whole page, HTML, HEAD, TITLE, META and so on) for web page spies.
+
+2006-12-11 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Version: 0.7.1
+
+	* GUI:
+
+	  - Fixed a segfault on spy removal.
+	  - Fixed a problem with the Gnome "Add to panel" image size.
+
+2006-12-11 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Version: 0.7.0
+
+	* GUI:
+
+	  - Now panel spy icon background color of the current main tree view
+	    selected spy is updated along with tree view selection.
+
+	* Other:
+
+	  - Fixed another segfault.
+
+2006-12-10 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI:
+
+	  - Updated pixmaps.
+
+	* Other:
+
+	  - Code cleaning and optimization.
+
+2006-12-09 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Other:
+
+	  - Fixed other major segfaults due to bad threads management.
+
+2006-12-08 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Other:
+
+	  - Fixed major segfaults due to bad threads management.
+
+2006-12-06 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Other:
+
+	  - Fixed a memory leak.
+	  - Tried to fix segaults due to bad threads/GTK+ management.
+
+2006-12-03 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Other:
+
+	  - Fixed a memory leak.
+	  - Code cleaning.
+
+2006-11-28 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Other:
+
+	  - Code cleaning.
+
+2006-11-22 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Other:
+
+	  - Fixed a bug in page load time alert limit saving/restoring process.
+
+	* Packaging:
+
+	  - Modified target of schemas file.
+
+2006-11-20 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Version: 0.6.0
+
+	* GUI:
+
+	  - Added special icon for "State" main tree view column when a event
+	    occured.
+	  - Changes/Alerts tree views enhancement.
+
+	* Documentation:
+
+	  - Updated applet help.
+
+	* Other:
+
+	  - Fixed several logic errors.
+
+2006-11-19 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI:
+
+	  - Added last execution date/time and next execution date/time.
+	  - Fixed a problem with tree view of changes.
+	  - All tree views columns are now reorderable and resizable.
+	  - Some updates for ports alerts (opened/closed).
+	  - New display style for alerts and changes.
+
+	* Other:
+
+	  - Fixed several logic errors.
+
+2006-11-18 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI:
+
+	  - Spies menu "View results" item is now active only if something has
+	    changed.
+
+2006-11-17 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI:
+
+	  - Main treeview enhancement.
+	  - Added creation date/time, update date/time and last alert date/time.
+	  - Added spy options update date/time.
+
+	* Other:
+
+	  - Fixed several memory leaks with in XML parser.
+
+2006-11-16 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Installation:
+
+	  - Better gconf schemas handling on uninstallation.
+
+	* GUI:
+
+	  - Added spy creation date/time.
+	  - Fixed a problem with applet panel orientation management.
+
+	* Configuration:
+
+	  - Fixed several problems with saving/restoring/displaying gconf
+	    parameters.
+
+	* Spy options:
+
+	  - Added a new option "Content change". It use MD5 to monitor changes 
+	    on Web pages.
+
+	* Other:
+
+	  - Code cleaning.
+
+2005-08-31 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Packaging:
+
+	  - Removed 'debian/' directory from distribution tarball.
+
+2005-08-29 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Version: 0.5.3
+
+	* GUI:
+
+	  - Fixed a bug in "Add Spy" druid navigation.
+
+2005-08-28 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Spies options:
+
+	  - Task #410 ("Check Now" button) should be ok now.
+
+	* GUI:
+
+	  - Some enhancements.
+
+	* Configuration:
+
+	  - Updated main applet icon location.
+
+	* Other:
+
+	  - Fixed gcc 4 warnings.
+
+2005-03-08 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI:
+
+	  - Updated about dialog for translators.
+
+2005-03-06 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI:
+
+	  - Added 'Execute now' on spies popup menus.
+
+	* Other:
+
+	  - Updated copyright.
+
+2004-12-14 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Version: 0.5.2
+
+	* Installation:
+
+	  - Applied anonymous patch to fix Bug #384 (The icons are hidden).
+
+2004-12-12 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Version: 0.5.1
+
+	* Configuration:
+
+	  - Added check for libgnutls version (>= 1.0) at configure time.
+
+	* Network:
+
+	  - A bug in connection management should be fixed.
+
+2004-11-30 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI:
+
+	  - Fixed a bug in GNOME default editor selection.
+	  - Some combo boxes enhancement.
+
+2004-10-26 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI:
+
+	  - Bug #350 (The applet does not respect gnome panel orientation) 
+	    should be fixed now.
+
+2004-10-22 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Version: 0.5.0
+
+	* Documentation:
+
+	  - Updated applet help for this new release.
+
+2004-10-21 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Spy options:
+
+	  - Task #335 (Add a TCP ports monitoring for server spies)  should be
+	    ok now.
+
+2004-10-17 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI:
+	
+	  - Fixed Bug #338 ("View" button and server spies).
+
+2004-10-15 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Spy options: 
+
+	  - Task #335 (Add a TCP ports monitoring for server spies) is 50% ok.
+
+2004-10-13 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Spies:
+
+	  - Bug #333 (Spies data are not saved when session is closed) is 
+	    fixed now.
+
+	* GUI:
+
+	  - Bug #334 (Problem in spies state refresh) is fixed now.
+
+2004-10-10 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Version: 0.4.1
+
+	* Other: 
+	
+	  - A lot of updates in installation/configuration process. Updated 
+	    my E-Mail address.
+
+2004-07-13 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI: 
+	
+	  - Some enhancement of GUI refresh process.
+
+2004-07-13 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Other: 
+	
+	  - Some threads' mutex management enhancement. Update of
+	    "gs_split_uri ()" function: now using gnomevfs to split URI.
+
+2004-07-09 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Version: 0.4.0
+
+	* Network: 
+	
+	  - We now handle redirections for "Web page" spies.
+
+	* Documentation: 
+	
+	  - English translation for help is ok now.
+
+	* Other: 
+	
+	  - Correction of some memory leaks and a bug that was crashing
+	    gospy-applet.
+
+2004-07-08 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Other: 
+	
+	  - Fixed a bug in "View online" for server type spy. Added a icon 
+	    "Deactivated" for panel icons spies. Some code cleaning.
+
+2004-07-08 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Documentation: 
+	
+	  - Help documentation for fr locale is finished. Now it must be 
+	    translated in english.
+
+	* Other: 
+	
+	  - Some code cleaning.
+
+2004-07-06 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI: 
+	
+	  - It is now possible to define a operator (=!<>) for most Web page 
+	    alerts.
+
+	* Documentation: 
+	
+	  - Added a "Help" for this applet. For the moment I am writing 
+	    it (in french :-) ). I think it will be ready soon for English
+	    tanslation.
+
+2004-07-05 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Other: 
+	
+	  - Added a "Status changed" alert. We now handle connection errors 
+	    and treat them as a alert.
+
+2004-07-05 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI: 
+	
+	  - Fixed a bug in authentication dialog.
+
+2004-07-05 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI: 
+	
+	  - Some updates in spies' popup menu management.
+
+2004-07-04 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI: 
+	
+	  - Now you can control tooltips display for panel spies. A contextual
+	    menu was added for panel spies.
+
+2004-07-04 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Version: 0.3.1
+
+	* GUI: 
+	
+	  - Fixed a bug in gconf settings management.
+
+2004-07-03 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Version: 0.3.0
+
+	* GUI: 
+	
+	  - Now you can control what to display in the Gnome panel. It is 
+	    possible to display both the applet's icon and the spies. Added
+	    tooltips for each spy in order to display its properties, state 
+	    etc. Added a "Display" notebook.
+
+	* Configuration: 
+	
+	  - Added a gconf schema.
+
+2004-07-02 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* WARNING: 
+	
+	  - Someone informs me that my "gspy-applet" project name is in 
+	    conflict with a already existent project "gspy". So I rename it
+	    "gospy-applet".
+
+	* Dependencies: 
+	
+	  - Added new dependency on libgnet.
+
+	* Network: 
+	
+	  - Now you can add Spies for web page with Basic Authentication.
+
+	* Other: 
+	
+	  - Fixed a bug in Spies properties file saving. Fixed a bug in diff 
+	    management for "Last modified" alert. Fixed a bug in "Changes" 
+	    tree view refresh process. Spie's files are not deleted anymore 
+	    when applet is detroyed.
+	
+2004-07-01 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Version: 0.2.0
+
+	* GUI: 
+	
+	  - Removed "Network" and "General" notebooks in "Preferences" 
+	    dialog (it was just shortcuts for global gnome settings). You can 
+	    now double-click on a row in the main tree view to edit a Spy.
+
+	* Other: 
+	
+	  - Added some macros for widgets management.
+
+2004-07-01 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI: 
+	
+	  - Updated "edit" dialog. Replaced expanders by notebooks.
+
+2004-06-31 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Network: 
+	
+	  - Updated "gethostbyname" section in "gspy_process_connect_thread ()".
+
+2004-06-30 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Network: 
+	
+	  - Fixed a bug in ENABLE_GNUTLS macro usage.
+
+	* Other: 
+	
+	  - Spy's log/diff files were not unlinked on spy deletion. It is ok 
+	    now.
+
+2004-06-29 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Network: 
+	
+	  - Added GNU TLS support. GNU TLS is automatically activated if found.
+	    You still can disable it by passing "--enable-gnutls=no" to 
+	    "./configure".
+
+2004-06-29 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* GUI: 
+	
+	  - A "A event occured" item has been added to the main popup menu. So 
+	    when you want to mark a spy as "Changed" or unmark it when a change
+	    occured, active/unactive it directly from this menu.
+
+2004-06-27 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Version: 0.1.0
+
+2004-06-23 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* WARNING: 
+	
+	  - You must delete manually your old "~/.gspy-applet" directory in 
+	    order to test this new release. If not, it will crash on loading 
+	    your old sources.
+
+	* Spy edition: 
+	
+	  - It is now possible to view diff beetween 2 changes for "Size 
+	    change" and "Last modified change" alerts.
+
+	* Other: 
+	
+	  - Correction of a few bugs in server spies.
+
+2004-06-22 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* URL parser: 
+	
+	  - Now you can arguments in URL for web page spies.
+
+2004-06-22 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Version: 0.0.2
+
+	* GUI: 
+
+	  - Now you can activate/deactivate all spies. A "View online" item 
+	    was added in the main popup menu for web page spies. Timeout 
+	    setting was removed (now it is hardcoded).
+
+2004-06-21 Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+
+	* Version: 0.0.1
+
+	* Initial version

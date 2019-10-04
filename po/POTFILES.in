@@ -1,0 +1,11 @@
+# Add files with translateable strings here.
+# Please keep this file sorted alphabetically.
+gospy-applet.glade/gospy-applet.glade.glade
+src/GNOME_GospyApplet.xml
+src/GNOME_GospyApplet_Factory.server.in.in
+src/gospy_applet.schemas.in
+src/gospy_applet.c
+src/gospy_applet.h
+src/gospy_druid.c
+src/gospy_properties.c
+src/gospy_process.c

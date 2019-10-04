@@ -1,0 +1,18 @@
+<Root>
+   <popups>
+      <popup name="button3">
+         <menuitem name="Item1" verb="gs_newsource" _label="_New source..."
+	           pixtype="stock" pixname="gtk-new"/>
+         <menuitem name="Item2" verb="gs_resetallstates" 
+                   _label="_Reset all states"
+	           pixtype="stock" pixname="gtk-refresh"/>
+         <separator />
+         <menuitem name="Item3" verb="gs_properties" _label="_Preferences..."
+                   pixtype="stock" pixname="gtk-properties"/>
+	 <menuitem name="Item4" verb="gs_help" _label="_Help"
+	           pixtype="stock" pixname="gtk-help"/>
+         <menuitem name="Item5" verb="gs_about" _label="_About..."
+                   pixtype="stock" pixname="gnome-stock-about"/>
+      </popup>
+   </popups>
+</Root>

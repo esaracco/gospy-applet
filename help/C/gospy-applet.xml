@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+  <!ENTITY legal SYSTEM "legal.xml">
+  <!ENTITY appletversion "0.7.0">
+  <!ENTITY manrevision "0.4">
+  <!ENTITY date "November 2006">
+  <!ENTITY year "2004-2006">
+  <!ENTITY applet "gospy-applet">
+  <!ENTITY authorname "Emmanuel Saracco">
+  <!ENTITY authoremail "esaracco@users.labs.libre-entreprise.org">
+]>
+
+<!-- =============Document Header ============================= -->
+<article id="index" lang="en">
+<articleinfo> 
+	<title>Manuel &applet; &manrevision;</title> 
+	<copyright>
+		<year>&year;</year>
+		<holder>&authorname;</holder>
+	</copyright>
+	<publisher> 
+		<publishername>&authorname;</publishername> 
+	</publisher> 
+	&legal;
+	<authorgroup> 
+		<author>
+			<firstname>Emmanuel</firstname>
+			<surname>Saracco</surname>
+			<email>&authoremail;</email>
+		</author>
+	</authorgroup>
+	<revhistory>
+		<revision> 
+			<revnumber>&manrevision;</revnumber> 
+			<date>&date;</date> 
+			<revdescription> 
+				<para role="author">&authorname;</para>
+				<para role="publisher">&authorname;</para>
+			</revdescription> 
+		</revision> 
+	</revhistory> 
+	<releaseinfo>This manual describes version &appletversion; of &applet;.</releaseinfo> 
+	<legalnotice> 
+		<title>Feedback</title> 
+		<para>To report a bug or make a suggestion regarding the &applet; applet or this manual, send an e-mail to <email>&authoremail;</email></para>
+	</legalnotice>
+  </articleinfo> 
+
+<!-- ============= Document Body ============================= -->
+  <indexterm zone="index"><primary>&applet;</primary></indexterm>
+
+<!-- ============= Introduction ============================== -->
+<sect1 id="gospy-applet-introduction"> 
+	<title>Introduction</title> 
+	<para>
+	  This application allows to monitor changes that can happen either on a Web page or on a remote server.
+	</para>
+	
+	<figure id="gospy-applet-settings-main">
+       	<title>main notebook</title>
+       	<screenshot>
+       		<mediaobject>
+       			<imageobject>
+       			<imagedata fileref="figures/gospy-applet-settings-main.png" format="PNG"/></imageobject>
+       			<textobject><phrase>main notebook</phrase></textobject>
+		</mediaobject></screenshot>
+	</figure>	
+	
+	<para>
+	  It can be used to monitor different types of changes:
+	  <itemizedlist mark='opencircle'>
+	  	<listitem><para>
+		  Detection of changes on a web page through the header's date of modification or through a simple size's change. 
+		</para></listitem>
+		<listitem><para>
+                  Research of a string in a page. 
+		</para></listitem>
+		<listitem><para>
+		  Control of server's load through the loading time of a page. 
+		</para></listitem>
+		<listitem><para>
+		  Test of the HTTP code present in the answer's header resent by the server.
+		</para></listitem>
+		<listitem><para>
+		  Detection of a web server's change on the remote host (new version or new software) 
+		</para></listitem>
+		<listitem><para>
+		  TCP ports tests on a server.
+		</para></listitem>
+	  </itemizedlist>
+	</para> 
+</sect1>
+
+<!-- ================ Usage ================================ -->
+<sect1 id="gospy-applet-usage"> 
+	<title>Use</title> 
+	
+	<!-- submenu -->
+	<orderedlist>
+		<listitem>
+			<para><link linkend="gospy-applet-panel">Managing panel's icons</link></para>
+		</listitem>		
+		<listitem>
+			<para><link linkend="gospy-applet-add-spy">Adding a Spy</link></para>
+		</listitem>
+		<listitem>
+			<para><link linkend="gospy-applet-remove-spy">Removing a Spy</link></para>
+		</listitem>
+		<listitem>
+			<para><link linkend="gospy-applet-edition-spy">Editing a Spy</link></para>
+		</listitem>
+	</orderedlist>
+	
+	<para>
+	  To be able to use <command>gospy-applet</command> you must first add Spies.
+	</para>
+	
+	<sect2 id="gospy-applet-panel">
+	<title>Managing panel's icons</title>
+	<para>
+	  You can choose to display or not the applet's icon and also some Spys' icons on the panel thanks to the applet's preferences.
+	  
+	<figure id="gospy-applet-panel-icon">
+       	<title>GNOME panel's icons</title>
+       	<screenshot>
+       		<mediaobject>
+       			<imageobject>
+       			<imagedata fileref="figures/gospy-applet-panel.png" format="PNG"/></imageobject>
+     			<textobject><phrase>GNOME panel's icons</phrase></textobject>
+		</mediaobject>
+	</screenshot>
+	</figure>
+
+	</para>
+	
+	<para>Once you have choosed to display the Spies' icons on the GNOME panel, you may display informations on each spy in a tooltip just by passing the mouse on it.</para>
+	<para>To see the results, to view on line (in case of a web page), or to edit properties of a Spy from the panel, just click on the icon concerned with the mouse's left button. A contextual menu will be displayed.</para>
+	
+	</sect2>
+		
+	<sect2 id="gospy-applet-add-spy">
+	<title>Adding a Spy</title>
+	<para>
+	  To add a new Spy you can :
+	  <itemizedlist>
+		<listitem><para>
+		  Double-click on the applet's icon, then click on the button "add" in the main notebook.
+		</para></listitem>
+		<listitem><para>
+		  Select "new source" from the applet's contextual menu.
+		</para></listitem>
+ 	  </itemizedlist>
+	</para>
+
+	<para>
+	  This will open an assistant that will allow you to add easily.
+	</para>
+	<para>
+	  After the Assistant presentation's page, you are invited to select the Spy's type and to mention an identification's string for it.
+	</para>	
+	 	 
+		<figure id="gospy-applet-druid1">
+        	<title>First screen</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy-applet-druid1.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Assistant's first screen</phrase></textobject>
+			</mediaobject></screenshot>
+      		</figure>	 	 
+	 	 
+		<sect3 id="gospy-applet-add-spy-druid-server-spy">
+		<title>Adding a Spy of "Server" type</title>
+		<para>
+		  If you have selected "Monitoring a server", a second page invits you to enter the adress of the server you want to monitor.
+		</para>
+	
+		<para>
+		  Then you have the choice between the following options:
+		  <itemizedlist mark='opencircle'>
+		  	<listitem>
+		  	  <para>
+		  	    Check a change of IP.
+		  	  </para>
+		  	  <para>
+		  	    This option will be desactivated if you have typed an IP address instead of a domain name.
+		  	  </para>
+		  	</listitem>
+		  	<listitem>
+		  	  <para>
+		  	    Check updates of the Web server.
+		  	  </para>
+		  	  <para>
+		  	    This option is only useful if you are positive that a Web server runs on the server mentionned above. You will be alerted in case of change of version or Web server's name.
+		  	  </para>
+		  	</listitem>
+			<listitem>
+		  	  <para>
+		  	    TCP ports tests on a server.
+		  	  </para>
+		  	  <para>
+		  	    This option allow you to enter multiple ports separated by a coma (for example: 22,110) or a range of ports (for example: 80-443). Then you will have to define when the alert must be raised: when those ports are opened or closed.
+		  	  </para>
+		  	</listitem>
+		  </itemizedlist>
+		</para>
+
+		<figure id="gospy-applet-druid2-server">
+        	<title>Second screen</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy-applet-druid2-server.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Assistant's second screen</phrase></textobject>
+			</mediaobject></screenshot>
+      		</figure>
+
+		<para>
+		  The following screen allows you to choose the frequency of checking. By default <command>gospy-applet</command> will trigger a testing process every 30 minutes. It is adviced to mention a different frequency for each Spy. 
+		</para>
+
+		<figure id="gospy-applet-druid3">
+        	<title>Last Druid page</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy-applet-druid3.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Last Druid page</phrase></textobject>
+			</mediaobject></screenshot>
+      		</figure>
+      		
+		</sect3>
+	 	 
+		<sect3 id="gospy-applet-add-spy-druid-web-page-spy">
+		<title>Adding a Spy of "Web page" type</title>
+		<para>
+		  If you have selected "Monitoring a Web page", a second page invits you to type the URL of the page you want to monitor.
+		</para>
+		
+		<figure id="gospy-applet-druid2-web-page">
+        	<title>Second screen</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy-applet-druid2-web-page.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Assistant's second screen</phrase></textobject>
+			</mediaobject></screenshot>
+      		</figure>		
+		
+		<para>
+		  If the URL needs an authentification, click on the expander "Authentification" and enter login and password.
+		</para>
+		<warning>
+			<para>
+		  	  The parameters you give will be stored clearly on your disk. Although the directory <command>gospy-applet</command> can only be acceeded by your user, it could be a risk.
+		  	</para>
+		</warning>
+
+		<figure id="gospy-applet-druid2-web-page-auth">
+        	<title>Authentification</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy-applet-druid2-web-page-auth.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Form for authentification</phrase></textobject>
+			</mediaobject></screenshot>
+      		</figure>		
+
+		<para>
+		  Then you have the choice between the following options:
+		  <variablelist>
+		  	<varlistentry><term>Update's date</term><listitem>
+		  		<para>This option detects a changing in the field "last-modified" of the HTTP header resent by the server.</para>
+		  	    	<warning><para>It isn't worth checking this option if the page to monitor is generated dynamically. Indeed the field concerned might be modified by the server even when the page has not been effectively modified.</para></warning></listitem>
+		  	</varlistentry>
+		  	<varlistentry><term>Size's change</term><listitem>
+		  		<para>Check this option if you want to be alerted as soon as the page's size changes.</para></listitem>
+		  	</varlistentry>
+		  	<varlistentry><term>Alert when the size is...</term><listitem>
+		  		<para>After checking this option, define the comparison's operator (equal/different/inferior/superior) then the reference's size. You will be alerted as soon as the result matches your choice.</para></listitem>
+		  	</varlistentry>		  	
+		  	<varlistentry><term>status' change</term><listitem>
+		  		<para>Check this option if you want to be alerted as soon as the HTTP status (response code resent by the server, e.g. 200, 404 etc.) of the page changes.</para></listitem>
+		  	</varlistentry>
+		  	<varlistentry><term>Alert when status is...</term><listitem>
+		  		<para>After checking this option, define the comparison's operator (equal/different/inferior/superior) then the reference's status. You will be alerted as soon as the result matches your choice.</para></listitem>
+		  	</varlistentry>
+		  	<varlistentry><term>Alert when the load is...</term><listitem>
+		  		<para>After checking this option, define the comparison's operator (equal/different/inferior/superior) then the time of reference. You will be alerted as soon as the result matches your choice. The "load" refers to the loading time of the complete page.</para>
+		  	  	<para>It can consequently also depend on the trafic on your own network.</para></listitem>
+		  	</varlistentry>
+			<varlistentry><term>Research of content</term><listitem>
+				<para>After checking this option, type the string to research (the research does not take the case in account). You will be alerted as soon as the mentionned string will be found in the page. </para></listitem>
+		  	</varlistentry>		  		
+		  </variablelist>
+		</para>		
+		<para>
+		  The following screen allows you to choose the frequency of checking. By default <command>gospy-applet</command> will trigger a testing process every 30 minutes. It is adviced to mention a different frequency for each Spy.
+		</para>		
+		</sect3>
+	</sect2>
+	<sect2 id="gospy-applet-remove-spy">
+	<title>Remove a Spy</title>
+	<para>
+	  To remove a Spy you must edit preferences either by clicking on the item "Preferences" in the applet's contextual menu or by double-clicking on the applet's icon.
+	</para>
+	<para>
+	  Then select the item to modify in the spies'list of the main notebook, and click on the button "Remove". You can also use the contextual menu that appears when you click on an item of the list with the right button of the mouse.
+	</para>
+	</sect2>
+	
+	<sect2 id="gospy-applet-edition-spy">
+	<title>Edit a Spy</title>
+	<!-- submenu -->
+	<orderedlist>
+		<listitem>
+			<para><link linkend="gospy-applet-edition-nb1-spy">Onglet "General"</link></para>
+		</listitem>
+		<listitem>
+			<para><link linkend="gospy-applet-edition-nb2-spy">Onglet "Monitoring"</link></para>
+		</listitem>
+		<listitem>
+			<para><link linkend="gospy-applet-edition-nb3-spy">Onglet "Results"</link></para>
+		</listitem>
+	</orderedlist>
+	
+	<para>
+	  To edit a Spy you can choose either to use directly the panel's icons (if you have set the appropriated options in the Preference), or to edit the preferences by clicking on the item "Preferences" in the applet's contextual menu or by double-clicking on its icon. 	  
+	</para>
+	<para>
+	  If you use the panel, you just have to click with the left button of the mouse on the icon of the Spy you want to edit, then select "Edit the properties" in the contextual menu. 
+	</para>
+	<para>
+	  If you use the Spies' list in the preferences' main notebook, you just have to click with the right button on the Spy's line to edit.
+	</para>
+	
+		<sect3 id="gospy-applet-edition-nb1-spy">
+		<title>Note book "General"</title>
+		<para>You can modify a part of the items you have defined when you created your Spy. It is possible to modify the associated label, the target, as well as the authentification parameters for the Spies of "Page Web" type and the execution's frequency.</para>
+		
+		<figure id="gospy-applet-edition-nb1">
+        	<title>Notebook "General"</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy-applet-edition-nb1.png" format="PNG"/></imageobject>
+        			<textobject><phrase>First Notebook</phrase></textobject>
+			</mediaobject></screenshot>
+      		</figure>		
+		
+		<para>
+		  A Spy may have two states:
+		  
+		  <variablelist>
+		  	<varlistentry><term>Activity</term><listitem>
+		  		<para>When the Spy is in the state "Activated" it runs normally. This state is the default state.</para></listitem>
+		  	</varlistentry>
+		  	<varlistentry><term>Desactivated</term><listitem>
+		  		<para>Give the Spy this state if you don't want it to monitor actively the Web page or the serveur. It avoids you to remove it.</para></listitem>
+		  	</varlistentry>
+		  </variablelist>		  
+		</para>
+		</sect3>
+	
+		<sect3 id="gospy-applet-edition-nb2-spy">	
+		<title>Notebook "Monitoring"</title>
+		<para>
+		  This notebook contains exactely the same monitoring options offered by the Assistant when you added your Spy.
+		</para>
+		
+		<figure id="gospy-applet-edition-nb2">
+        	<title>Notebook "Monitoring"</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy-applet-edition-nb2.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Second notebook</phrase></textobject>
+			</mediaobject></screenshot>
+      		</figure>		
+		
+		</sect3>
+	
+		<sect3 id="gospy-applet-edition-nb3-spy">
+		<title>Notebook "Results"</title>
+		<para>
+		  This notebook allows you to view the historic of the alerts generated by<command>gospy-applet</command>.
+		</para>
+		
+		<figure id="gospy-applet-edition-nb3">
+        	<title>Notebook "Results"</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy-applet-edition-nb3.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Third notebook</phrase></textobject>
+			</mediaobject></screenshot>
+      		</figure>		
+		
+		<para>
+		  It is made of two parts. 
+		</para>
+		
+		<sect4 id="ospy-applet-edition-nb3-changes-spy">		  
+		<title>Part "Changes"</title>
+		  <para>The part "Changes" allows you to view the result of the Spies for which you have choosed to monitor changes (size's modification, HTTP status modification etc.). It is possible to view a differential for some changes like a size's or a date's modification.</para>
+		  </sect4>
+		  
+		<sect4 id="ospy-applet-edition-nb3-alerts-spy">
+		<title>Part "Alerts"</title>
+		  <para>The part "Alerts" allows you to view the result of the Spies for which you have choosed to monitor the coming of a specified state (loading time, connection error etc.).</para>
+		</sect4>
+		  
+		</sect3>
+	</sect2>
+</sect1>
+
+<sect1 id="gospy-applet-color-codes"> 
+	<title>Icons and colour codes</title> 
+	<para>
+	  <command>gospy-applet</command> uses a certain number of icons and colours to signify at every moment what it is making.
+	</para>
+	
+	<sect2 id="gospy-applet-icons">
+	<title>The icons</title>
+	<para>
+		<figure id="gospy-applet-icon-server">
+        	<title>Icon for the Spies of "Server" type</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/type_server.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icon for the Spies of "Server" type</phrase></textobject>
+			</mediaobject>
+		</screenshot>
+      		</figure>
+
+				<figure id="gospy-applet-icon-web-page">
+        	<title>Icon for the Spies of "Web Page" type</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/type_web_page.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icon for the Spies of "Web Page" type</phrase></textobject>
+			</mediaobject>
+		</screenshot>
+      		</figure>      				
+      		
+		<figure id="gospy-applet-icon-activated">
+        	<title>Icon of "Activated" type (when the Spy is activated)</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/state_activated.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icon of "Activated" type (when the Spy is activated)</phrase></textobject>
+			</mediaobject>
+		</screenshot>
+      		</figure>
+      		
+		<figure id="gospy-applet-icon-deactivated">
+        	<title>Icon of "desactivated" type (when the Spy is desactivated)</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/state_deactivated.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icon of "desactivated" type (when the Spy is desactivated)</phrase></textobject>
+			</mediaobject>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/type_server_deactivated.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icon of "desactivated" type (when the Spy is desactivated)</phrase></textobject>
+			</mediaobject>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/type_web_page_deactivated.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icon of "desactivated" type (when the Spy is desactivated)</phrase></textobject>
+			</mediaobject>						
+		</screenshot>
+      		</figure> 		
+      	
+		<figure id="gospy-applet-icon-spleeping">
+        	<title>Icon of "Sleeping" type (when the Spy does not work)</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/task_sleeping.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icon of "Sleeping" type (when the Spy does not work)</phrase></textobject>
+			</mediaobject>
+		</screenshot>
+      		</figure>
+      		
+		<figure id="gospy-applet-icon-running">
+        	<title>Icon of "Running" type (when the Spy works)</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/task_running.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icon of "Running" type (when the Spy works)</phrase></textobject>
+			</mediaobject>
+		</screenshot>
+      		</figure>
+      		
+		<figure id="gospy-applet-icon-main-normal">
+        	<title>Main icon (nothing happens)</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy_applet.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Main icon (nothing happens)</phrase></textobject>
+			</mediaobject>
+		</screenshot>
+      		</figure>
+      		
+		<figure id="gospy-applet-icon-main-running">
+        	<title>Main icon running (at least one of the Spies works)</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy_applet_run.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Main icon running (at least one of the Spies works)</phrase></textobject>
+			</mediaobject>
+		</screenshot>
+      		</figure>      		      		      		      		      		      		      		      		      		      		      		      		      		      		 
+		<figure id="gospy-applet-icon-main-change">
+        	<title>Main icon with change (at least one alert has been triggered for a Spy)</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy_applet_changed.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Main icon with change (at least one alert has been triggered for a Spy)</phrase></textobject>
+			</mediaobject>
+		</screenshot>
+      		</figure>
+      		
+		<figure id="gospy-applet-icon-web-page-running">
+        	<title>Icon Spy is working (the Spy is working)</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/type_web_page_run.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icon Spy is working (the Spy is working)</phrase></textobject>
+			</mediaobject>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/type_server_run.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icon Spy is working (the Spy is working)</phrase></textobject>
+			</mediaobject>			
+		</screenshot>
+      		</figure>
+      		
+		<figure id="gospy-applet-icon-web-page-changed">
+        	<title>Icon Spy detected change (the Spy has detected a change)</title>
+        	<screenshot>
+                        <mediaobject>
+                                <imageobject>
+                                <imagedata fileref="figures/state_changed.png" format="PNG"/></imageobject>
+                                <textobject><phrase>Icon of "changed" type (when a event occured)</phrase></textobject>
+                        </mediaobject>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/type_web_page_changed.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icon Spy detected change (the Spy has detected a change)</phrase></textobject>
+			</mediaobject>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/type_server_changed.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icon Spy working (Spy is working)</phrase></textobject>
+			</mediaobject>			
+		</screenshot>
+      		</figure>      		      		      		     		      		     		      		      		     		      		     		
+	</para>			
+	</sect2>
+	</sect1>
+
+<!-- ============= Customization ============================= -->
+<!-- Use this section to describe how to customize the applet. -->
+<sect1 id="gospy-applet-prefs"> 
+	 <title>Preferences</title> 
+	 <para>To acceed to the preferences of the <command>gospy-applet</command>, click twice on the applet or select "Preferences" in the contextual menu. Then, click on the notebook "Display". You can act on the following parameters:</para>
+	 
+	 <para>
+	<figure id="gospy-applet-settings-display">
+       	<title>Display notebook</title>
+       	<screenshot>
+       		<mediaobject>
+       			<imageobject>
+       			<imagedata fileref="figures/gospy-applet-settings-display.png" format="PNG"/></imageobject>
+       			<textobject><phrase>Display notebook</phrase></textobject>
+		</mediaobject>
+	</screenshot>
+	</figure>
+	</para>
+	 
+	 <para>
+		<variablelist>
+		  	<varlistentry><term>Display the main icon</term><listitem>
+		  		<para>Check this option if you want the applet's main icon to appear on the GNOME panel.</para></listitem>
+		  	</varlistentry>	 
+		  	<varlistentry><term>Display the Spies's icons</term><listitem>
+		  		<para>Check this option if you want the icons of your Spies to appear on the GNOME panel.</para></listitem>
+		  	</varlistentry>
+		  	<varlistentry><term>Display the tooltips for the panel's icons</term><listitem>
+		  		<para>Check this option if you want the tooltips to be displayed for the Spies' icons on the GNOME panel.</para></listitem>
+		  	</varlistentry>	
+		  	<varlistentry><term>Background colour</term><listitem>
+		  		<para>Allows you to specify a background colour for the applet.</para></listitem>
+		  	</varlistentry>		  	
+		</variablelist>
+	 </para>
+</sect1>
+
+</article> 

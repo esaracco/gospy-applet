@@ -1,0 +1,33 @@
+gospy-applet (0.9-1.es) unstable; urgency=low
+
+  * New release.
+
+ -- Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>  Wed, 8 Apr 2009 23:35:56 +0100
+
+gospy-applet (0.8.0-1.es) unstable; urgency=low
+
+  * New release.
+  * Added dependency on libesmtp.
+
+ -- Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>  Sun, 11 Feb 2007 21:22:56 +0100
+
+gospy-applet (0.7.1-1.es) unstable; urgency=low
+
+  * New release.
+
+ -- Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>  Mon, 11 Dec 2006 16:15:56 +0100
+
+gospy-applet (0.7.0-1.es) unstable; urgency=low
+
+  * New release.
+
+ -- Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>  Mon, 11 Dec 2006 01:42:22 +0100
+
+gospy-applet (0.6.0-1.es) unstable; urgency=low
+
+  * This package has nothing to do with debian. It is badly done but should
+    works. Just for me and all fellows that do not want to install this
+    application by their own.
+
+ -- Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>  Tue, 21 Nov 2006 22:15:00 +0100
+

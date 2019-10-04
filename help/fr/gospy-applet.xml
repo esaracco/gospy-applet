@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+  <!ENTITY legal SYSTEM "legal.xml">
+  <!ENTITY appletversion "0.7.0">
+  <!ENTITY manrevision "0.4">
+  <!ENTITY date "November 2006">
+  <!ENTITY year "2004-2006">
+  <!ENTITY applet "gospy-applet">
+  <!ENTITY authorname "Emmanuel Saracco">
+  <!ENTITY authoremail "esaracco@users.labs.libre-entreprise.org">
+]>
+
+<!-- =============Document Header ============================= -->
+<article id="index" lang="fr">
+<articleinfo> 
+	<title>Manuel &applet; &manrevision;</title> 
+	<copyright>
+		<year>&year;</year>
+		<holder>&authorname;</holder>
+	</copyright>
+	<publisher> 
+		<publishername>&authorname;</publishername> 
+	</publisher> 
+	&legal;
+	<authorgroup> 
+		<author>
+			<firstname>Emmanuel</firstname>
+			<surname>Saracco</surname>
+			<email>&authoremail;</email>
+		</author>
+	</authorgroup>
+	<revhistory>
+		<revision> 
+			<revnumber>&manrevision;</revnumber> 
+			<date>&date;</date> 
+			<revdescription> 
+				<para role="author">&authorname;</para>
+				<para role="publisher">&authorname;</para>
+			</revdescription> 
+		</revision> 
+	</revhistory> 
+	<releaseinfo>Le présent manuel fournit une description de l'applet &applet; &appletversion;.</releaseinfo> 
+	<legalnotice> 
+		<title>Votre avis</title> 
+		<para>Pour signaler un problème ou faire une suggestion concernant l'application &applet; ou le présent manuel, veuillez envoyer un mail sur <email>&authoremail;</email></para>
+	</legalnotice>
+  </articleinfo> 
+
+<!-- ============= Document Body ============================= -->
+  <indexterm zone="index"><primary>&applet;</primary></indexterm>
+
+<!-- ============= Introduction ============================== -->
+<sect1 id="gospy-applet-introduction"> 
+	<title>Introduction</title> 
+	<para>
+	  Cette application permet de surveiller les changements pouvant se produire sur une page Web ou bien une machine accessible via le réseau.
+	</para>
+	
+	<figure id="gospy-applet-settings-main">
+       	<title>Onglet principal</title>
+       	<screenshot>
+       		<mediaobject>
+       			<imageobject>
+       			<imagedata fileref="figures/gospy-applet-settings-main.png" format="PNG"/></imageobject>
+       			<textobject><phrase>Onglet principal</phrase></textobject>
+		</mediaobject></screenshot>
+	</figure>	
+	
+	<para>
+	  Elle peut-être utilisée pour:
+	  <itemizedlist mark='opencircle'>
+	  	<listitem><para>
+		  Détecter des modifications sur une page Web par l'intermédiaire de la date de modification de l'en-tête ou d'un simple changement de taille.
+		</para></listitem>
+		<listitem><para>
+                  Rechercher la présence d'une chaîne dans une page. 
+		</para></listitem>
+		<listitem><para>
+		  Contrôler la charge du serveur par l'intermédiaire du temps de chargement d'une page.
+		</para></listitem>
+		<listitem><para>
+		  Tester du code HTTP présent dans l'en-tête de la réponse renvoyée par le serveur.
+		</para></listitem>
+		<listitem><para>
+		  Détecter un changement de serveur Web sur l'hôte distant (nouvelle version ou nouveau logiciel).
+		</para></listitem>
+		<listitem><para>
+		  Tester des ports TCP sur un serveur.
+		</para></listitem>
+	  </itemizedlist>
+	</para> 
+</sect1>
+
+<!-- ================ Usage ================================ -->
+<sect1 id="gospy-applet-usage"> 
+	<title>Utilisation</title> 
+	
+	<!-- submenu -->
+	<orderedlist>
+		<listitem>
+			<para><link linkend="gospy-applet-panel">Gestion des icônes du panel</link></para>
+		</listitem>		
+		<listitem>
+			<para><link linkend="gospy-applet-add-spy">Ajout d'un Espion</link></para>
+		</listitem>
+		<listitem>
+			<para><link linkend="gospy-applet-remove-spy">Suppression d'un Espion</link></para>
+		</listitem>
+		<listitem>
+			<para><link linkend="gospy-applet-edition-spy">Edition d'un Espion</link></para>
+		</listitem>
+	</orderedlist>
+	
+	<para>
+	  Pour pouvoir utiliser <command>gospy-applet</command> il faut en premier lieu ajouter des Espions.
+	</para>
+	
+	<sect2 id="gospy-applet-panel">
+	<title>Gestion des icônes du panel</title>
+	<para>
+	  Vous pouvez contrôler l'affichage ou non de l'icône de l'applet ainsi que des icônes des Espions sur le panel via les préférence de l'applet.
+	  
+	<figure id="gospy-applet-panel-icon">
+       	<title>Icônes du panel GNOME</title>
+       	<screenshot>
+       		<mediaobject>
+       			<imageobject>
+       			<imagedata fileref="figures/gospy-applet-panel.png" format="PNG"/></imageobject>
+       			<textobject><phrase>Icônes du panel GNOME</phrase></textobject>
+		</mediaobject>
+	</screenshot>
+	</figure>
+
+	</para>
+	
+	<para>Lorsque vous avez choisi d'afficher les icônes des Espions sur le panel GNOME il est possible en passant la souris sur chacun d'eux d'afficher les informations le concernant dans un tootip.</para>
+	<para>Pour accéder aux résultats de recherches, pour visualiser en ligne (dans le cas d'une page Web), ou pour éditer les propriétés d'un Espion à partir du panel, cliquez sur l'icône voulue avec le bouton gauche de la souris. Un menu contextuel s'affichera.</para>
+	
+	</sect2>
+		
+	<sect2 id="gospy-applet-add-spy">
+	<title>Ajout d'un Espion</title>
+	<para>
+	  Pour ajouter un nouvel Espion vous pouvez:
+	  <itemizedlist>
+		<listitem><para>
+		  Double-cliquer sur l'icône de l'applet puis cliquer sur le bouton "Ajouter" dans l'onglet principal.
+		</para></listitem>
+		<listitem><para>
+		  Sélectionner "Nouvelle source" depuis le menu contextuel de l'applet.
+		</para></listitem>
+ 	  </itemizedlist>
+	</para>
+
+	<para>
+	  Cela ouvrira un Assistant qui vous permettra de faire l'ajout en toute simplicité.
+	</para>
+	<para>
+	  Après la page de présentation de l'Assistant il vous est proposé de sélectionner le type d'Espion voulu et de saisir un libellé qui lui sera associé. Ce libellé vous permettra par la suite de l'identifier facilement dans la liste de vos Espions.
+	</para>	
+	 	 
+		<figure id="gospy-applet-druid1">
+        	<title>Premier écran</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy-applet-druid1.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Premier écran de l'Assistant</phrase></textobject>
+			</mediaobject></screenshot>
+      		</figure>	 	 
+	 	 
+		<sect3 id="gospy-applet-add-spy-druid-server-spy">
+		<title>Ajout d'un Espion de type "Serveur"</title>
+		<para>
+		  Si vous avez sélectionné "Surveillance d'un serveur" vous arrivez sur une seconde page qui vous permet d'entrer l'adresse du serveur à surveiller.
+		</para>
+	
+		<para>
+		  Ensuite vous avez le choix parmis les options suivantes:
+		  <itemizedlist mark='opencircle'>
+		  	<listitem>
+		  	  <para>
+		  	    Vérifier un changement d'IP.
+		  	  </para>
+		  	  <para>
+		  	    Cette option sera désactivée si vous avez saisi une adresse IP au lieu d'un nom de domaine.
+		  	  </para>
+		  	</listitem>
+		  	<listitem>
+		  	  <para>
+		  	    Vérifier les mises à jour du serveur Web.
+		  	  </para>
+		  	  <para>
+		  	    Cette option n'est utile qu'à partir du moment ou vous êtes certain qu'un serveur Web tourne sur le serveur indiqué plus haut. Vous serez prévenu lors d'un changement de version ou nom.
+		  	  </para>
+		  	</listitem>
+		  	<listitem>
+		  	  <para>
+		  	    Tester des ports TCP sur le serveur.
+		  	  </para>
+		  	  <para>
+		  	    Cette option vous permet d'entrer plusieurs ports séparés par une virgule (par exemple: 22,110) ou bien une plage de ports (par exemple: 80-443). Vous définissez alors à quel moment une alerte doit être déclenchée: lorsque ces ports sont ouverts, ou  bien lorsqu'ils sont fermés.
+		  	  </para>
+		  	</listitem>
+		  </itemizedlist>
+		</para>
+		
+		<figure id="gospy-applet-druid2-server">
+        	<title>Deuxième écran</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy-applet-druid2-server.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Deuxième écran de l'Assistant</phrase></textobject>
+			</mediaobject></screenshot>
+      		</figure>
+
+		<para>
+		  L'écran suivant vous permet de choisir la fréquence des vérifications. Par défaut <command>gospy-applet</command> déclenchera un processus de test toutes les 30 minutes. Il est conseillé d'indiquer une fréquence différente pour chaque Espion.
+		</para>
+      		
+		<figure id="gospy-applet-druid3">
+        	<title>Dernière page de l'Assistant</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy-applet-druid3.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Dernière page de l'Assistant</phrase></textobject>
+			</mediaobject></screenshot>
+      		</figure>
+
+		</sect3>
+	 	 
+		<sect3 id="gospy-applet-add-spy-druid-web-page-spy">
+		<title>Ajout d'un Espion de type "Page Web"</title>
+		<para>
+		  Si vous avez sélectionné "Surveillance d'une page Web" vous arrivez sur une seconde page qui vous permet de saisir l'URL de la page à surveiller.
+		</para>
+		
+		<figure id="gospy-applet-druid2-web-page">
+        	<title>Deuxième écran</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy-applet-druid2-web-page.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Deuxième écran de l'Assistant</phrase></textobject>
+			</mediaobject></screenshot>
+      		</figure>		
+		
+		<para>
+		  Si la page saisie nécessite une authentification, cliquez sur l'expandeur "Authentification" et renseignez le login et le mot de passe.
+		</para>
+		<warning>
+			<para>
+		  	  Les paramètres saisis seront stockés en clair sur votre disque. Bien que le répertoire de <command>gospy-applet</command> ne soit accessible qu'à votre utilisateur cela peut représenter un risque.
+		  	</para>
+		</warning>
+
+		<figure id="gospy-applet-druid2-web-page-auth">
+        	<title>Autentification</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy-applet-druid2-web-page-auth.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Formulaire pour l'authentification</phrase></textobject>
+			</mediaobject></screenshot>
+      		</figure>		
+
+		<para>
+		  Ensuite vous avez le choix entre les options suivantes:
+		  <variablelist>
+		  	<varlistentry><term>Date de mise à jour</term><listitem>
+		  		<para>Cette option détecte un changement dans le champ "last-modified" de l'en-tête HTTP renvoyé par le serveur.</para>
+		  	    	<warning><para>Il ne sert généralement à rien de cocher cette option si la page à surveiller est générée dynamiquement. En effet le champ concerné est suceptible d'être modifié par le serveur même lorsque la page n'a pas effectivement été modifiée.</para></warning></listitem>
+		  	</varlistentry>
+		  	<varlistentry><term>Changement de taille</term><listitem>
+		  		<para>Cochez cette option si vous voulez être alerté dès que la taille de la page change.</para></listitem>
+		  	</varlistentry>
+		  	<varlistentry><term>Alerte quand la taille est...</term><listitem>
+		  		<para>Après avoir coché cette option, définissez l'opérateur de comparaison (égale/différente/inférieure/supérieure) puis la taille de référence. Vous serez prévenu dès que le résultat obtenu correspondra à vos choix.</para></listitem>
+		  	</varlistentry>		  	
+		  	<varlistentry><term>Changement de status</term><listitem>
+		  		<para>Cochez cette option si vous voulez être alerté dès que le statut HTTP (code de réponse renvoyé par le serveur. ex: 200, 404 etc.) de la page change.</para></listitem>
+		  	</varlistentry>
+		  	<varlistentry><term>Alerte quand le statut est...</term><listitem>
+		  		<para>Après avoir coché cette option, définissez l'opérateur de comparaison (égal/différent/inférieur/supérieur) puis le statut de référence. Vous serez prévenu dès que le résultat obtenu correspondra à vos choix.</para></listitem>
+		  	</varlistentry>
+		  	<varlistentry><term>Alerte quand le load est...</term><listitem>
+		  		<para>Après avoir coché cette option, définissez l'opérateur de comparaison (égal/différent/inférieur/supérieur) puis le nombre de secondes devant servir de référence. Vous serez prévenu dès que le résultat obtenu correspondra à vos choix.</para>
+		  	  	<para>Le "load" correspond au temps de chargement de la page complète. Il peut donc dépendre également de l'emcombrement de votre propre réseau.</para></listitem>
+		  	</varlistentry>
+			<varlistentry><term>Recherche de contenu</term><listitem>
+				<para>Après avoir coché cette option, saisissez la chaîne à rechercher (la recherche ne tient pas compte des majuscules/minuscules). Vous serez prévenu dès que la chaîne indiquée sera trouvée dans la page.</para></listitem>
+		  	</varlistentry>		  		
+		  </variablelist>
+		</para>		
+		<para>
+		  L'écran suivant vous permet de choisir la fréquence des vérifications. Par défaut <command>gospy-applet</command> déclenchera un processus de test toutes les 30 minutes. Il est conseillé d'indiquer une fréquence différente pour chaque Espion.
+		</para>		
+		</sect3>
+	</sect2>
+	<sect2 id="gospy-applet-remove-spy">
+	<title>Suppression d'un Espion</title>
+	<para>
+	  Pour supprimer un Espion vous devez éditer les préférences en cliquant sur l'élément "Préférences" dans le menu contextuel de l'applet ou en double-cliquant sur l'icône de l'applet.
+	</para>
+	<para>
+	  Sélectionnez ensuite l'élément à modifier dans la liste des Espions de l'onglet principal puis cliquez sur le bouton "Enlever". Vous pouvez également utiliser le menu contextuel qui apparait lorsque vous cliquez sur un élément de la liste avec le bouton droit de la souris.
+	</para>
+	</sect2>
+	
+	<sect2 id="gospy-applet-edition-spy">
+	<title>Edition d'un Espion</title>
+	<!-- submenu -->
+	<orderedlist>
+		<listitem>
+			<para><link linkend="gospy-applet-edition-nb1-spy">Onglet "Général"</link></para>
+		</listitem>
+		<listitem>
+			<para><link linkend="gospy-applet-edition-nb2-spy">Onglet "Surveillance"</link></para>
+		</listitem>
+		<listitem>
+			<para><link linkend="gospy-applet-edition-nb3-spy">Onglet "Résultats"</link></para>
+		</listitem>
+	</orderedlist>
+	
+	<para>
+	  Pour éditer un Espion vous pouvez soit passer directement par les icônes du panel (si vous avez configurer les bonnes options dans les Préférences), soit editer les préférences en cliquant sur l'élément "Préférences" dans le menu contextuel de l'applet ou en double-cliquant sur son icône.
+	</para>
+	<para>
+	  Si vous passez par le panel, il vous suffit de cliquer avec le bouton gauche de la souris sur l'icône de l'Espion que vous voulez éditer, puis de sélectionner "Editer les propriétés" dans le menu contextuel.
+	</para>
+	
+		<sect3 id="gospy-applet-edition-nb1-spy">
+		<title>Onglet "Général"</title>
+		<para>Vous pouvez modifier une partie des éléments définis lors de la création de votre Espion. Il est possible de modifier le libellé associé, la cible, ainsi que les paramètres d'authentification pour les Espions de type "Page Web" et la fréquence d'exécution.</para>
+		
+		<figure id="gospy-applet-edition-nb1">
+        	<title>Onglet "Général"</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy-applet-edition-nb1.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Premier onglet</phrase></textobject>
+			</mediaobject></screenshot>
+      		</figure>		
+		
+		<para>
+		  Un Espion peut avoir deux états:
+		  
+		  <variablelist>
+		  	<varlistentry><term>Activé</term><listitem>
+		  		<para>Lorsque l'Espion est dans l'état "Activé" il fonctionne normalement. Il s'agit de l'état par défaut.</para></listitem>
+		  	</varlistentry>
+		  	<varlistentry><term>Désactivé</term><listitem>
+		  		<para>Mettez l'Espion dans cet état lorsque vous ne voulez plus qu'il surveille activement la page web ou le serveur. Cela permet de ne pas le supprimer.</para></listitem>
+		  	</varlistentry>
+		  </variablelist>		  
+		</para>
+		</sect3>
+	
+		<sect3 id="gospy-applet-edition-nb2-spy">	
+		<title>Onglet "Surveillance"</title>
+		<para>
+		  Cet onglet reprend exactement les options de surveillance proposées par l'Assistant lors de l'ajout de votre Espion.
+		</para>
+		
+		<figure id="gospy-applet-edition-nb2">
+        	<title>Onglet "Surveillance"</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy-applet-edition-nb2.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Deuxième onglet</phrase></textobject>
+			</mediaobject></screenshot>
+      		</figure>		
+		
+		</sect3>
+	
+		<sect3 id="gospy-applet-edition-nb3-spy">
+		<title>Onglet "Résultats"</title>
+		<para>
+		  Cet onglet vous permet de visualiser l'historique des alertes générées par <command>gospy-applet</command>.
+		</para>
+		
+		<figure id="gospy-applet-edition-nb3">
+        	<title>Onglet "Résultats"</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy-applet-edition-nb3.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Troisième onglet</phrase></textobject>
+			</mediaobject></screenshot>
+      		</figure>		
+		
+		<para>
+		  Il se compose de deux partie. 
+		</para>
+		
+		<sect4 id="ospy-applet-edition-nb3-changes-spy">		  
+		<title>La partie "Changements"</title>
+		  <para>La partie "Changements" permet de visualiser le résultat des Espions pour lesquels vous avez choisi de surveiller des changements (modification de le taille, modification du statut HTTP etc.). Il est possible de visualiser un différentiel pour certains changements, comme une modification de taille ou de date de dernière modification.</para>
+		  </sect4>
+		  
+		<sect4 id="ospy-applet-edition-nb3-alerts-spy">
+		<title>La partie "Alertes"</title>
+		  <para>La partie "Alertes" permet de visualiser le résultat des Espions pour lesquels vous avez choisi de surveiller la venue d'un état donné (temps de chargement, erreur de connexion etc.).</para>
+		</sect4>
+		  
+		</sect3>
+	</sect2>
+</sect1>
+
+<sect1 id="gospy-applet-color-codes"> 
+	<title>Icônes et codes couleurs</title> 
+	<para>
+	  <command>gospy-applet</command> utilise un certain nombre d'icônes et de couleurs pour signifier à tout moment ce qu'elle est en train de faire.
+	</para>
+	
+	<sect2 id="gospy-applet-icons">
+	<title>Les icônes</title>
+	<para>
+		<figure id="gospy-applet-icon-server">
+        	<title>Icône pour les Espions de type "Serveur"</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/type_server.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icône pour les Espions de type "Serveur"</phrase></textobject>
+			</mediaobject>
+		</screenshot>
+      		</figure>
+
+				<figure id="gospy-applet-icon-web-page">
+        	<title>Icône pour les Espions de type "Web Page"</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/type_web_page.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icône pour les Espions de type "Web Page"</phrase></textobject>
+			</mediaobject>
+		</screenshot>
+      		</figure>      				
+      		
+		<figure id="gospy-applet-icon-activated">
+        	<title>Icône d'état "Activé" (lorsque l'Espion est activé)</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/state_activated.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icône d'état "Activé" (lorsque l'Espion est activé)</phrase></textobject>
+			</mediaobject>
+		</screenshot>
+      		</figure>
+      		
+		<figure id="gospy-applet-icon-deactivated">
+        	<title>Icône d'état "Désactivé" (lorsque l'Espion est désactivé)</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/state_deactivated.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icône d'état "Désactivé" (lorsque l'Espion est désactivé)</phrase></textobject>
+			</mediaobject>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/type_server_deactivated.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icône d'état "Désactivé" (lorsque l'Espion est désactivé)</phrase></textobject>
+			</mediaobject>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/type_web_page_deactivated.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icône d'état "Désactivé" (lorsque l'Espion est désactivé)</phrase></textobject>
+			</mediaobject>						
+		</screenshot>
+      		</figure> 		
+      		
+		<figure id="gospy-applet-icon-spleeping">
+        	<title>Icône d'état "Au repos" (lorsque l'Espion ne travaille pas)</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/task_sleeping.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icône d'état "Au repos" (lorsque l'Espion ne travaille pas)</phrase></textobject>
+			</mediaobject>
+		</screenshot>
+      		</figure>
+      		
+		<figure id="gospy-applet-icon-running">
+        	<title>Icône d'état "En cours" (lorsque l'Espion travaille)</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/task_running.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icône d'état "En cours" (lorsque l'Espion travaille)</phrase></textobject>
+			</mediaobject>
+		</screenshot>
+      		</figure>
+      		
+		<figure id="gospy-applet-icon-main-normal">
+        	<title>Icône principale (rien ne se passe)</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy_applet.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icône principal (rien ne se passe)</phrase></textobject>
+			</mediaobject>
+		</screenshot>
+      		</figure>
+      		
+		<figure id="gospy-applet-icon-main-running">
+        	<title>Icône principale "travail en cours" (au moins un des Espions travaille)</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy_applet_run.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icône principal "travail en cours" (au moins un des Espions travaille)</phrase></textobject>
+			</mediaobject>
+		</screenshot>
+      		</figure>      		      		      		      		      		      		      		      		      		      		      		      		      		      		 
+		<figure id="gospy-applet-icon-main-change">
+        	<title>Icône principale avec changement (au moins une alerte a été déclenchée pour un Espion)</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/gospy_applet_changed.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icône principale avec changement (au moins une alerte a été déclenchée pour un Espion)</phrase></textobject>
+			</mediaobject>
+		</screenshot>
+      		</figure>
+      		
+		<figure id="gospy-applet-icon-web-page-running">
+        	<title>Icône Espion en cours (l'Espion est en train de travailler)</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/type_web_page_run.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icône Espion en cours (l'Espion est en train de travailler)</phrase></textobject>
+			</mediaobject>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/type_server_run.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icône Espion en cours (l'Espion est en train de travailler)</phrase></textobject>
+			</mediaobject>			
+		</screenshot>
+      		</figure>
+      		
+		<figure id="gospy-applet-icon-web-page-changed">
+        	<title>Icône Espion changement détecté (l'Espion a détecté un changement)</title>
+        	<screenshot>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/state_changed.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icône d'état "Changement" (lorsqu'un évènement a eu lieu)</phrase></textobject>
+			</mediaobject>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/type_web_page_changed.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icône Espion changement détecté (l'Espion a détecté un changement)</phrase></textobject>
+			</mediaobject>
+        		<mediaobject>
+        			<imageobject>
+        			<imagedata fileref="figures/type_server_changed.png" format="PNG"/></imageobject>
+        			<textobject><phrase>Icône Espion en cours (l'Espion est en train de travailler)</phrase></textobject>
+			</mediaobject>			
+		</screenshot>
+      		</figure>      		      		      		     		      		     		      		      		     		      		     		
+	</para>			
+	</sect2>
+	</sect1>
+
+<!-- ============= Customization ============================= -->
+<!-- Use this section to describe how to customize the applet. -->
+<sect1 id="gospy-applet-prefs"> 
+	 <title>Préférences</title> 
+	 <para>Pour accéder aux préférences de <command>gospy-applet</command>, cliquez 2 fois sur l'applet ou sélectionnez "Préférences" dans le menu contextuel. Ensuite, cliquez sur l'onglet "Affichage". Vous pouvez agir sur les paramètres suivants:</para>
+	 
+	 <para>
+	<figure id="gospy-applet-settings-display">
+       	<title>Onglet des préférences de l'affichage</title>
+       	<screenshot>
+       		<mediaobject>
+       			<imageobject>
+       			<imagedata fileref="figures/gospy-applet-settings-display.png" format="PNG"/></imageobject>
+       			<textobject><phrase>Onglet des préférences de l'affichage</phrase></textobject>
+		</mediaobject>
+	</screenshot>
+	</figure>
+	</para>
+	 
+	 <para>
+		<variablelist>
+		  	<varlistentry><term>Afficher l'icône principale</term><listitem>
+		  		<para>Cochez cette option si vous voulez que l'icône principale de l'applet apparaisse sur le panel GNOME.</para></listitem>
+		  	</varlistentry>	 
+		  	<varlistentry><term>Afficher les icônes des Espions</term><listitem>
+		  		<para>Cochez cette option si vous voulez que les icônes de vos Espions apparaisse sur le panel GNOME.</para></listitem>
+		  	</varlistentry>
+		  	<varlistentry><term>Afficher les tooltips pour les icônes du panel</term><listitem>
+		  		<para>Cochez cette option si vous voulez que les tooltips soient affichés pour les icônes des Espions sur le panel GNOME.</para></listitem>
+		  	</varlistentry>	
+		  	<varlistentry><term>Couleur de fond</term><listitem>
+		  		<para>Vous permet de spécifier une couleur de fond pour l'applet.</para></listitem>
+		  	</varlistentry>		  	
+		</variablelist>
+	 </para>
+</sect1>
+
+</article> 

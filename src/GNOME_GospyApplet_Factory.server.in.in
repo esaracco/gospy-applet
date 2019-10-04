@@ -1,0 +1,31 @@
+<oaf_info>
+<oaf_server iid="OAFIID:GNOME_GospyApplet_Factory" type="exe"
+            location="gospy-applet">
+	<oaf_attribute name="repo_ids" type="stringv">
+		<item value="IDL:Bonobo/GenericFactory:1.0"/>
+		<item value="IDL:Bonobo/Unknown:1.0"/>
+	</oaf_attribute>
+	<oaf_attribute name="name" type="string" 
+                 _value="gospy Applet Factory"/>
+	<oaf_attribute name="description" type="string" 
+                 _value="Factory for creating the gospy Applet"/>
+</oaf_server>
+
+<oaf_server iid="OAFIID:GNOME_GospyApplet" type="factory"
+            location="OAFIID:GNOME_GospyApplet_Factory">
+
+	<oaf_attribute name="repo_ids" type="stringv">
+		<item value="IDL:GNOME/Vertigo/PanelAppletShell:1.0"/>
+		<item value="IDL:Bonobo/Control:1.0"/>
+		<item value="IDL:Bonobo/Unknown:1.0"/>
+	</oaf_attribute>
+	<oaf_attribute name="name" type="string" 
+                 value="Gospy Applet"/>
+	<oaf_attribute name="description" type="string" 
+                 _value="Monitoring changes on servers and web pages"/>
+	<oaf_attribute name="panel:category" type="string" 
+                 _value="Internet"/>
+	<oaf_attribute name="panel:icon" type="string" 
+                 value="gospy_applet.png"/>
+</oaf_server>
+</oaf_info>

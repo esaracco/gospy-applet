@@ -1,0 +1,248 @@
+AC_INIT(src/gospy_applet.c)
+AM_INIT_AUTOMAKE(gospy-applet, 0.9svn20100502)
+AM_MAINTAINER_MODE
+AM_CONFIG_HEADER(config.h)
+
+dnl i18n stuff and gettext stuff
+AC_PROG_INTLTOOL([0.30])
+
+GNOME_COMPILE_WARNINGS
+gnome_cv_use_gnome=yes
+
+AC_ISC_POSIX
+AC_PROG_CC
+AC_STDC_HEADERS
+AM_PROG_LIBTOOL
+AC_PATH_PROG(GCONFTOOL, gconftool-2)
+
+GTK_REQUIRED=1.3.11
+LIBGNOME_REQUIRED=1.108.0
+LIBGNOMEUI_REQUIRED=1.108.0
+GCONF_REQUIRED=1.1.5
+GDK_PIXBUF_REQUIRED=1.3.11
+LIBGNOMECANVAS_REQUIRED=1.108.0
+SCROLLKEEPER_REQUIRED=0.1.4
+LIBPANEL_REQUIRED=1.5.8
+
+pkg_modules="gnet-2.0 gnutls > 1.0"
+PKG_CHECK_MODULES(PACKAGE, [$pkg_modules])
+AC_SUBST(PACKAGE_CFLAGS)
+AC_SUBST(PACKAGE_LIBS)
+
+PKG_CHECK_MODULES(GNOME_APPLETS, libpanelapplet-2.0 libglade-2.0 gnome-vfs-module-2.0 gnome-vfs-2.0 libgnome-2.0 libgnomeui-2.0)
+AC_SUBST(GNOME_APPLETS_CFLAGS)
+AC_SUBST(GNOME_APPLETS_LIBS)
+
+PKG_CHECK_MODULES(GCONF_APPLETS, gconf-2.0 >= $GCONF_REQUIRED, , AC_MSG_ERROR([
+                  *** gconf-2.0 not found. You can find it on ftp://ftp.gnome.org/pub/earthquake
+                      $GCONF_APPLETS_PKG_ERRORS]))
+AC_SUBST(GCONF_APPLETS_CFLAGS)
+AC_SUBST(GCONF_APPLETS_LIBS)
+
+if test x"$GCONFTOOL" = xno; then
+  AC_MSG_ERROR([gconftool-2 executable not found in your path - should be instal
+led with GConf])
+fi
+
+AM_GCONF_SOURCE_2
+
+PKG_CHECK_MODULES(GDK_PIXBUF_APPLETS, gdk-pixbuf-2.0 >= $GDK_PIXBUF_REQUIRED)
+AC_SUBST(GDK_PIXBUF_APPLETS_CFLAGS)
+AC_SUBST(GDK_PIXBUF_APPLETS_LIBS)
+
+PKG_CHECK_MODULES(LIBGNOMECANVAS_APPLETS, libgnomecanvas-2.0 >= $LIBGNOMECANVAS_REQUIRED)
+AC_SUBST(LIBSGNOMECANVAS_APPLETS_CFLAGS)
+AC_SUBST(LIBSGNOMECANVAS_APPLETS_LIBS)
+
+ALL_LINGUAS="fr it es"
+
+GETTEXT_PACKAGE=gospy-applet
+AC_SUBST(GETTEXT_PACKAGE)
+AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE",[Define gettext package])
+
+AM_GLIB_GNU_GETTEXT
+
+# this is the directory where the *.{mo,gmo} files are installed
+gnomelocaledir='${prefix}/${DATADIRNAME}/locale'
+AC_SUBST(gnomelocaledir)
+
+#******************************************
+#** Check for Scrollkeeper               **
+#******************************************
+
+AC_PATH_PROG(SCROLLKEEPER_CONFIG, scrollkeeper-config, no)
+if test x$SCROLLKEEPER_CONFIG = xno; then
+  AC_MSG_ERROR(Couldn't find scrollkeeper-config, please install the Scrollkeeper 0.1.4 package)
+fi
+AC_SUBST(SCROLLKEEPER_REQUIRED)
+
+AC_SUBST(CFLAGS)
+AC_SUBST(CPPFLAGS)
+AC_SUBST(LDFLAGS)
+
+# Honor aclocal flags
+ACLOCAL="$ACLOCAL $ACLOCAL_FLAGS"
+
+AC_DEFINE_UNQUOTED(GNOME_ICONDIR, "${prefix}/share/pixmaps",[gnome pixmaps directory])
+
+################################################
+# SSL stuff
+################################################
+
+GNUTLS_LIBS=''
+GNUTLS_FLAGS=''
+AC_MSG_CHECKING([whether to use GNUTLS library (HTTPS check)])
+if test "x$enable_gnutls" != "xno"; then
+  AC_ARG_WITH(
+        [gnutls],
+    AC_HELP_STRING(
+      [--with-gnutls@<:@=DIR@:>@],
+      [use GNUTLS library located in directory DIR (if supplied) for HTTPS check @<:@default=yes (if present)@:>@]
+    ),
+    [
+     if test "x$withval" = "xno"; then
+       AC_MSG_RESULT([not requested])
+     elif test "x$withval" = "xyes" -o -d "$withval"; then
+       want_gnutls=yes
+       want_gnutls_path=$withval
+     else
+       AC_MSG_RESULT([no])
+       AC_MSG_WARN([The specified path for libgnutls does not exist.])
+       want_gnutls=no
+     fi
+    ],
+    [want_gnutls=yes]
+  )
+else
+  AC_MSG_RESULT([not requested])
+  want_gnutls=no
+fi
+if test "x$want_gnutls" != "xno"; then
+  AC_MSG_RESULT([requested])
+        AC_CHECK_LIB(
+          [gnutls],
+          [gnutls_global_init],
+          [
+           AC_CHECK_HEADERS(
+             [gnutls.h gnutls/gnutls.h],
+             [
+              want_gnutls=yes
+              GNUTLS_FLAGS="$GNUTLS_FLAGS -DHAVE_GNUTLS_H_IN_SUBDIR -DENABLE_GNUTLS"
+        GNUTLS_LIBS="-lgnutls"
+        LDFLAGS="$LDFLAGS $want_gnutls_path"
+             ],
+       [want_gnutls=no]
+           )
+          ],
+          [
+           want_gnutls=no
+           AC_MSG_WARN([You requested libgnutls support, but it doesn't seem to be installed.])
+          ]
+        )
+else
+  AC_MSG_WARN([You are building without libgnutls support. gospy-applet will not be able to do HTTPS check...])
+fi
+AC_SUBST(GNUTLS_LIBS)
+AC_SUBST(GNUTLS_FLAGS)
+
+################################################
+# ESMTP stuff
+################################################
+
+LIBESMTP_CFLAGS=''
+LIBESMTP_LIBS=''
+AC_MSG_CHECKING(whether to use the ESMTP library if available)
+if test "x$enable_libesmtp" = "xno" ; then
+	want_libesmtp=no
+	AC_MSG_RESULT(no)
+else
+	AC_MSG_RESULT(yes)
+
+	want_libesmtp=defaultyes
+	libesmtp_check_path=${PATH}
+
+        AC_ARG_WITH(libesmtp,
+changequote(<<, >>)dnl
+<<  --with-libesmtp[=DIR]        use ESMTP library (located in directory DIR, if supplied).   [default=yes, if present]>>,
+changequote([, ])dnl
+        [
+        if   test "x$withval" = "xno"; then
+                want_libesmtp=no
+        elif test "x$withval" = "xyes"; then
+                want_libesmtp=yes
+        elif test -d "$withval"; then
+                want_libesmtp=yes
+                LDFLAGS=$LDFLAGS ${withval}/lib
+		libesmtp_check_path=$withval/bin
+        fi
+        ])
+
+        if test "x$want_libesmtp" = "xdefaultyes"; then
+                want_libesmtp=yes
+                withval=/usr/local/libesmtp
+                if test -d "$withval"; then
+                        LDFLAGS=$LDFLAGS ${withval}/lib
+                fi
+        fi
+
+        if test "x$want_libesmtp" = "xyes"; then
+		AC_PATH_PROG([libesmtp_config_path],
+                     [libesmtp-config],
+                     [no],
+                     [${libesmtp_check_path}])
+
+	        if test "x$libesmtp_config_path" = "xno"
+	        then
+	          AC_MSG_ERROR([libesmtp-config binary not found.])
+	        fi
+
+                AC_CHECK_LIB(esmtp, smtp_create_session, 
+			[LIBESMTP_LIBS=`${libesmtp_config_path} --libs`],,)
+                LIBESMTP_FLAGS="-DENABLE_LIBESMTP `${libesmtp_config_path} --cflags`"
+        else
+                AC_MSG_RESULT(not required)
+        fi
+fi
+AC_SUBST(LIBESMTP_LIBS)
+AC_SUBST(LIBESMTP_FLAGS)
+
+
+AC_DEFINE_UNQUOTED(DATADIR, "${prefix}/share", [Data Directory])
+AC_DEFINE_UNQUOTED(SYSCONFDIR, "${prefix}/etc", [System Config Directory])
+AC_DEFINE_UNQUOTED(LIBDIR, "${prefix}/lib", [Library Directory])
+AC_DEFINE_UNQUOTED(PREFIX, "$prefix", [Prefix Directory])
+
+AC_OUTPUT([
+  Makefile
+  pixmaps/Makefile
+  gospy-applet.glade/Makefile
+  src/Makefile
+  src/pixmaps/Makefile
+  po/Makefile.in
+  help/Makefile
+  help/C/Makefile
+  help/fr/Makefile
+])
+
+echo "
+	====================================================================
+	gospy-applet, a GNOME applet monitoring servers and web pages $VERSION
+	====================================================================
+
+	prefix                                  : ${prefix}
+	source code location                    : ${srcdir}
+	data location                           : ${datadir}
+	compiler                                : ${CC}
+	cflags                                  : ${CFLAGS}
+	maintainer mode                         : ${USE_MAINTAINER_MODE}
+
+	SSL layer               (libgnutls)     : ${want_gnutls}
+	SMTP layer              (libesmtp)      : ${want_libesmtp}
+
+        >>  IMPORTANT >>
+        >>
+        >>  After installing this applet with \"make install\", please *restart 
+        >>  your GNOME session*.
+        >>
+        <<  IMPORTANT <<
+"

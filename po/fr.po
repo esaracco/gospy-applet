@@ -1,0 +1,1025 @@
+# gospy-applet fr.po
+# Copyright (C) 2004-2009
+# Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>.
+# This file is distributed under the same license as the gospy-applet package.
+# Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>, 2004-2005
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gospy-applet 0.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-04-08 13:27+0200\n"
+"PO-Revision-Date: 2009-04-08 13:27+0200\n"
+"Last-Translator: Emmanuel Saracco <esaracco@users.labs.libre-entreprise>\n"
+"Language-Team: French <esaracco@users.labs.libre-entreprise>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:1
+msgid " minute(s)"
+msgstr " minute(s)"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:2
+msgid " minute(s)."
+msgstr " minute(s)."
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:3
+msgid "<b>Alerts</b>"
+msgstr "<b>Alertes</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:4
+msgid "<b>Changes</b>"
+msgstr "<b>Changements</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:5
+msgid "<b>Content</b>"
+msgstr "<b>Contenu</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:6
+msgid "<b>Creation:</b>"
+msgstr "<b>Création:</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:7
+msgid "<b>Group:</b>"
+msgstr "<b>Groupe:</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:8
+msgid "<b>Group</b>"
+msgstr "<b>Groupe</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:9
+msgid ""
+"<b>Here you can define actions to trigger when a event occure.</b>\n"
+"<i>For the moment </i>gospy-applet<i> only deal with E-Mail actions.</i>"
+msgstr ""
+"<b>Vous pouvez définir ici des actions à déclencher lorsqu'un événement "
+"survient.</b>\n"
+"<i>Pour le moment </i>gospy-applet<i> ne gère que les courriels.</i>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:11
+msgid "<b>Last event:</b>"
+msgstr "<b>Dernier événement:</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:12
+msgid "<b>Last execution:</b>"
+msgstr "<b>Dernière exécution:</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:13
+msgid "<b>Load</b>"
+msgstr "<b>Chargement</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:14
+msgid "<b>Location</b>"
+msgstr "<b>Emplacement</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:15
+msgid "<b>Next execution:</b>"
+msgstr "<b>Prochaine exécution:</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:16
+msgid "<b>Ports</b>"
+msgstr "<b>Ports</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:17
+msgid "<b>Scheduler</b>"
+msgstr "<b>Fréquence</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:18
+msgid "<b>Search</b>"
+msgstr "<b>Recherche</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:19
+msgid "<b>Server</b>"
+msgstr "<b>Serveur</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:20
+msgid "<b>State</b>"
+msgstr "<b>État</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:21
+msgid "<b>Status</b>"
+msgstr "<b>Statut</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:22
+msgid "<b>Target:</b>"
+msgstr "<b>Cible:</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:23
+msgid "<b>Title:</b>"
+msgstr "<b>Titre:</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:24
+msgid "<b>Title</b>"
+msgstr "<b>Titre</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:25
+msgid "<b>Type</b>"
+msgstr "<b>Type</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:26
+msgid "<b>Update:</b>"
+msgstr "<b>Mise à jour:</b>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:27
+msgid "<i>In :</i>"
+msgstr "<i>Dans :</i>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:28
+#: ../src/gospy_applet.c:761 ../src/gospy_applet.c:786
+#: ../src/gospy_applet.c:792 ../src/gospy_applet.c:798
+#: ../src/gospy_applet.c:804
+msgid "<i>Not yet</i>"
+msgstr "<i>Pas encore</i>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:29
+msgid "<i>Search for :</i>"
+msgstr "<i>Chaîne à rechercher :</i>"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:30
+msgid "A event occured"
+msgstr "Un événement a eu lieu"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:31
+msgid "Actions..."
+msgstr "Actions..."
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:32
+#: ../src/gospy_applet.c:3567
+msgid "Activated"
+msgstr "Activé"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:33
+msgid "Add a Spy - Druid"
+msgstr "Ajouter un espion - Assistant"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:34
+msgid "Add new source"
+msgstr "Ajouter une source"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:35
+msgid "Alert when load is"
+msgstr "Alerte quand le load est"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:36
+msgid "Alert when size is"
+msgstr "Alerte quand la taille est"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:37
+msgid "Alert when status is"
+msgstr "Alerte quand le statut est"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:38
+msgid "Authentication"
+msgstr "Authentification"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:39
+msgid "Background color : "
+msgstr "Couleur de fond : "
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:40
+msgid ""
+"Before checking this option, be sure that the page is not dynamically "
+"generated."
+msgstr ""
+"Avant de cocher cette option, assurez-vous que la page n'est pas générée "
+"dynamiquement."
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:41
+msgid "By group:"
+msgstr "Par groupe:"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:42
+msgid "Case insensitive"
+msgstr "Insensible à la casse"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:43
+msgid "Check for IP change"
+msgstr "Vérifier un changement d'IP"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:44
+msgid "Check for web server update"
+msgstr "Vérifier les mises à jour du serveur web"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:45
+msgid ""
+"Choose the type of spy you want to configure and enter a identification "
+"string for it."
+msgstr ""
+"Choisissez le type d'Espion que vous voulez configurer et associez-lui une "
+"chaîne de reconnaissance."
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:46
+msgid "Content change"
+msgstr "Changement de contenu"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:47
+msgid "Deactivate all"
+msgstr "Tout désactiver"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:48
+#: ../src/gospy_applet.c:3567
+msgid "Deactivated"
+msgstr "Désactivé"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:49
+msgid "Delete"
+msgstr "Supprimer"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:50
+msgid "Display"
+msgstr "Affichage"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:51
+msgid "Display main icon"
+msgstr "Afficher l'icône principale"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:52
+msgid "Display spies icons"
+msgstr "Afficher les icônes des Espions"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:53
+msgid "Display tooltips for panel icons"
+msgstr "Afficher les tooltips pour les icônes du panel"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:54
+msgid "E-Mail address :"
+msgstr "Courriel :"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:55
+msgid "Edit"
+msgstr "Editer"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:56
+msgid "Edit properties"
+msgstr "Editer les propriétés"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:57
+msgid "Event's actions"
+msgstr "Actions des événements"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:58
+msgid "Every"
+msgstr "Toutes les"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:59
+msgid ""
+"Example: 21,110 (only check those 2 ports) or 21-80 (check all ports between "
+"21 and 80)"
+msgstr ""
+"Exemple: 21,110 (vérifier uniquement ces 2 ports) ou 21-80 (vérifier tous "
+"les ports entre 21 et 80)"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:60
+msgid "General"
+msgstr "Général"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:61
+msgid "Groups"
+msgstr "Groupes"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:62
+msgid ""
+"Here you can determine the frequency of the check for your new Spy (in "
+"minute).\n"
+"\n"
+"You should choose a reasonably hight value here. It is also recomanded to "
+"choose a different value for each spy."
+msgstr ""
+"Vous pouvez déterminer la fréquence des vérification de votre Espion ici (en "
+"minutes).\n"
+"\n"
+"Vous devriez choisir une valeur assez élevée. Il est également recommandé de "
+"choisir une valeur différente pour chaque Espion."
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:65
+msgid "Hostname:"
+msgstr "Nom d'hôte:"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:66
+msgid "If checked, case will be ignored"
+msgstr "Si cochée, la casse sera ignorée"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:67
+msgid ""
+"If you enter a IP address you will not be able to choose the \"Check for IP "
+"change\" option anymore."
+msgstr ""
+"Si vous entrez une adresse IP vous ne pourrez plus choisir l'option "
+"\"Vérifier un changement d'IP\"."
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:68
+msgid "Information will be saved <i>in clear</i> on your disk."
+msgstr "Les informations seront sauvegardées <i>en clair</i> sur votre disque."
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:69
+msgid "KBytes"
+msgstr "KOctets"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:70
+msgid "Last modified date"
+msgstr "Date de mise à jour"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:71
+msgid "Login :"
+msgstr "Identifiant :"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:72
+msgid "Monitoring"
+msgstr "Surveillance"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:73
+msgid "On request"
+msgstr "Sur demande"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:74
+msgid "Password :"
+msgstr "Mot de passe :"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:75
+msgid "Preferences"
+msgstr "Préferences"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:76
+msgid "Results"
+msgstr "Résultats"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:77
+msgid "Run now"
+msgstr "Exécuter maintenant"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:78
+msgid "SMTP login :"
+msgstr "Identifiant SMTP :"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:79
+msgid "SMTP password :"
+msgstr "Mot de passe SMTP :"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:80
+msgid "SMTP port :"
+msgstr "Port SMTP :"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:81
+msgid "SMTP server :"
+msgstr "Serveur SMTP :"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:82
+msgid "Scheduling"
+msgstr "Programmation"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:83
+msgid "Search content"
+msgstr "Recherche de contenu"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:84
+msgid "Server Monitoring"
+msgstr "Surveillance d'un serveur"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:85
+#: ../src/gospy_druid.c:552
+msgid "Server monitoring"
+msgstr "Surveillance d'un serveur"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:86
+msgid "Size change"
+msgstr "Changement de taille"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:87
+msgid ""
+"Sometime the content has changed, but the size is still the same. If you "
+"checked this option you will be alerted of a changed."
+msgstr ""
+"Quelquefois le contenu change mais la taille reste la même. Si vous avez "
+"coché cette option vous serez alerté du changement."
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:88
+msgid "Sources"
+msgstr "Sources"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:89
+msgid "Spy type to create"
+msgstr "Type de l'espion à créer"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:90
+msgid "Status change"
+msgstr "Changement de statut"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:91
+msgid "Terminated"
+msgstr "Terminé"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:92
+msgid "Test"
+msgstr "Test"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:93
+msgid ""
+"The Spy will notify you if the web server change of name (Apache, IIS etc.) "
+"or version"
+msgstr ""
+"L'espion vous préviendra si le serveur change de nom (Apache, IIS etc.) ou "
+"de version"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:94
+msgid ""
+"The Spy will notify you if the web server change of name (Apache, IIS etc.) "
+"or version. This option is only usefull if the server have his web service "
+"enabled."
+msgstr ""
+"L'espion vous préviendra si le serveur change de nom (Apache, IIS etc.) ou "
+"de version. Cette options est utile uniquement si le serveur a un service "
+"web actif."
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:95
+msgid "The Spy will notify you when the server IP will change"
+msgstr "L'espion vous préviendra quand l'IP du serveur changera"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:96
+msgid ""
+"The type of Spy you chose is able to monitor the following items. Please "
+"select what you want to monitor and fill the corresponding fields."
+msgstr ""
+"Le type d'Espion que vous avez choisi est capable de gérer les éléments "
+"suivants. Veuillez sélectionner ce que vous désirez surveiller et renseigner "
+"les champs correspondants."
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:97
+msgid ""
+"The type of Spy you chose is able to monitor the following items. Please "
+"select what you want to monitor and fill the corresponding fields.\n"
+msgstr ""
+"Le type d'espion que vous avez choisi est capable de gérer les éléments "
+"suivants. Veuillez sélectionner ce que vous désirez surveiller et renseigner "
+"les champs correspondants.\n"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:99
+msgid "Use authentication"
+msgstr "Utiliser l'authentification"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:100
+msgid "View"
+msgstr "Voir"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:101
+msgid "View diff"
+msgstr "Voir les différences"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:102
+msgid "View online"
+msgstr "Voir en ligne"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:103
+msgid "View results"
+msgstr "Voir les résultats"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:104
+msgid "Warn me by E-Mail"
+msgstr "Me prévenir par courriel"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:105
+#: ../src/gospy_druid.c:560
+msgid "Web page monitoring"
+msgstr "Surveillance d'une page web"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:106
+msgid ""
+"Welcome to this assistant!\n"
+"\n"
+"In order to monitor changes you must \n"
+"first create a Spy.\n"
+"\n"
+"Please click on the Next button to begin..."
+msgstr ""
+"Bienvenue dans cet assistant!\n"
+"\n"
+"Pour pouvoir surveiller les changements vous devez tout d'abord créer un "
+"Espion.\n"
+"\n"
+"Veuillez cliquer sur Suivant pour commencer..."
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:112
+msgid "When following ports are"
+msgstr "Quand les ports suivants sont"
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:113
+msgid "information will be saved <i>in clear</i> on your disk."
+msgstr "Les informations seront sauvegardées <i>en clair</i> sur votre disque."
+
+#: ../gospy-applet.glade/gospy-applet.glade.glade.h:114
+msgid "sec."
+msgstr "sec."
+
+#: ../src/GNOME_GospyApplet.xml.h:1
+msgid "_About..."
+msgstr "_A propos..."
+
+#: ../src/GNOME_GospyApplet.xml.h:2
+msgid "_Help"
+msgstr "_Aide"
+
+#: ../src/GNOME_GospyApplet.xml.h:3
+msgid "_New source..."
+msgstr "_Nouvelle source"
+
+#: ../src/GNOME_GospyApplet.xml.h:4
+msgid "_Preferences..."
+msgstr "_Préferences..."
+
+#: ../src/GNOME_GospyApplet.xml.h:5
+msgid "_Reset all states"
+msgstr "_Réinitialiser tous les états"
+
+#: ../src/GNOME_GospyApplet_Factory.server.in.in.h:1
+msgid "Factory for creating the gospy Applet"
+msgstr "Usine pour la création de l'applet gospy"
+
+#: ../src/GNOME_GospyApplet_Factory.server.in.in.h:2
+msgid "Internet"
+msgstr "Internet"
+
+#: ../src/GNOME_GospyApplet_Factory.server.in.in.h:3
+msgid "Monitoring changes on servers and web pages"
+msgstr "Surveille les changements sur des serveurs ou des pages web"
+
+#: ../src/GNOME_GospyApplet_Factory.server.in.in.h:4
+msgid "gospy Applet Factory"
+msgstr "Usine pour gospy applet"
+
+#: ../src/gospy_applet.schemas.in.h:1
+msgid "Background applet color."
+msgstr "Couleur de fond de l'applet."
+
+#: ../src/gospy_applet.schemas.in.h:2
+msgid "Whether to display or not the main applet icon on the panel."
+msgstr ""
+"Détermine l'affichage ou non de l'icône principale de l'applet sur le panel."
+
+#: ../src/gospy_applet.schemas.in.h:3
+msgid "Whether to display or not the spies icons on the panel."
+msgstr "Détermine l'affichage ou non des icônes des Espions sur le panel."
+
+#: ../src/gospy_applet.schemas.in.h:4
+msgid ""
+"Whether to display or not tooltips when spies are displayed on the gnome "
+"panel."
+msgstr ""
+"Détermine l'affichage ou non des icônes des tooltips pour les Espions "
+"affichés sur le panel."
+
+#: ../src/gospy_applet.c:184
+msgid "Failed writing file"
+msgstr "Échec lors de l'écriture dans le fichier"
+
+#: ../src/gospy_applet.c:224 ../src/gospy_applet.c:332
+msgid "Could not open file"
+msgstr "Impossible d'ouvrir le fichier"
+
+#: ../src/gospy_applet.c:229
+msgid "Could not open pipe"
+msgstr "Impossible d'ouvrir le tube"
+
+#: ../src/gospy_applet.c:264
+msgid "*This message has been automatically sent by gospy-applet*"
+msgstr "*Ce message a été automatiquement envoyé par gospy-applet*"
+
+#: ../src/gospy_applet.c:284
+msgid "A error occured while contacting SMTP server"
+msgstr "Une erreur est survenue en contactant le serveur SMTP"
+
+#: ../src/gospy_applet.c:293
+msgid "Test message has been sent"
+msgstr "Le message de test a été envoyé"
+
+#: ../src/gospy_applet.c:498 ../src/gospy_applet.c:1199
+#: ../src/gospy_process.c:430 ../src/gospy_process.c:1065
+msgid "Title"
+msgstr "Titre"
+
+#: ../src/gospy_applet.c:498 ../src/gospy_process.c:430
+#: ../src/gospy_process.c:1065
+msgid "Target"
+msgstr "Cible"
+
+#: ../src/gospy_applet.c:500
+msgid ""
+"You asked gospy-applet to send a E-Mail test...\r\n"
+"\r\n"
+"So, here I am :-)"
+msgstr ""
+"Vous avez demandé à ce que gospy-applet envoie un courriel de test...\r\n"
+"\r\n"
+"Et bien me voici :-)"
+
+#: ../src/gospy_applet.c:502
+msgid "E-Mail test"
+msgstr "Test de courriel"
+
+#: ../src/gospy_applet.c:1072 ../src/gospy_applet.c:1074
+msgid "New group"
+msgstr "Nouveau groupe"
+
+#: ../src/gospy_applet.c:1144
+msgid "Group"
+msgstr "Groupe"
+
+#. Type
+#: ../src/gospy_applet.c:1154 ../src/gospy_applet.c:1265
+#: ../src/gospy_applet.c:1313
+msgid "Type"
+msgstr "Type"
+
+#: ../src/gospy_applet.c:1169
+msgid "State"
+msgstr "Etat"
+
+#: ../src/gospy_applet.c:1184
+msgid "Process"
+msgstr "Processus"
+
+#. Last event
+#: ../src/gospy_applet.c:1208
+msgid "Last event"
+msgstr "Dernier événement"
+
+#: ../src/gospy_applet.c:1228
+msgid "Name"
+msgstr "Nom"
+
+#. Date
+#: ../src/gospy_applet.c:1247 ../src/gospy_applet.c:1295
+msgid "Date"
+msgstr "Date"
+
+#. Hour
+#: ../src/gospy_applet.c:1256 ../src/gospy_applet.c:1304
+msgid "Hour"
+msgstr "Heure"
+
+#. Value
+#: ../src/gospy_applet.c:1274
+msgid "Value"
+msgstr "Valeur"
+
+#. Old value
+#: ../src/gospy_applet.c:1322
+msgid "Old value"
+msgstr "Ancienne valeur"
+
+#. New value
+#: ../src/gospy_applet.c:1332
+msgid "New value"
+msgstr "Nouvelle valeur"
+
+#: ../src/gospy_applet.c:1639
+msgid " IP change "
+msgstr "Changement d'IP"
+
+#: ../src/gospy_applet.c:1642
+msgid " Web Server update "
+msgstr "Serveur Web modifié"
+
+#: ../src/gospy_applet.c:1645
+msgid " Modification "
+msgstr " Modification "
+
+#: ../src/gospy_applet.c:1648
+msgid " Redirection "
+msgstr " Redirection "
+
+#: ../src/gospy_applet.c:1651
+msgid " Size change "
+msgstr " Changement de taille "
+
+#: ../src/gospy_applet.c:1654
+msgid " Content change "
+msgstr " Changement de contenu "
+
+#: ../src/gospy_applet.c:1657
+msgid " Status change "
+msgstr " Changement de statut "
+
+#: ../src/gospy_applet.c:1660
+msgid " Content found "
+msgstr " Contenu trouvé "
+
+#: ../src/gospy_applet.c:1663
+msgid " Opened port"
+msgstr "Port ouvert"
+
+#: ../src/gospy_applet.c:1666
+msgid " Closed port"
+msgstr "Port fermé"
+
+#: ../src/gospy_applet.c:1669
+msgid " Connection error "
+msgstr "Erreur de connection"
+
+#: ../src/gospy_applet.c:1672
+msgid " Connection timeout "
+msgstr "Délai dépassé"
+
+#: ../src/gospy_applet.c:1675
+msgid " Status found "
+msgstr " Statut trouvé "
+
+#: ../src/gospy_applet.c:1678
+msgid " Size found "
+msgstr " Taille trouvée "
+
+#: ../src/gospy_applet.c:1681
+msgid " Load "
+msgstr " Chargement "
+
+#: ../src/gospy_applet.c:1699
+msgid "Date format is too long"
+msgstr "Le format de la date est trop long"
+
+#: ../src/gospy_applet.c:2143 ../src/gospy_applet.c:2244
+#: ../src/gospy_druid.c:442 ../src/gospy_druid.c:482
+msgid ""
+"Please, enter the following elements:\n"
+"\n"
+msgstr ""
+"Veuillez renseigner les éléments suivants:\n"
+"\n"
+
+#: ../src/gospy_applet.c:2151 ../src/gospy_druid.c:449
+msgid "- The location to monitor\n"
+msgstr "- L'emplacement à surveiller\n"
+
+#: ../src/gospy_applet.c:2158 ../src/gospy_applet.c:2257
+#: ../src/gospy_druid.c:477 ../src/gospy_druid.c:500
+msgid "- A option\n"
+msgstr "- Une option\n"
+
+#: ../src/gospy_applet.c:2174 ../src/gospy_druid.c:461
+msgid "- All authentication fields\n"
+msgstr "- Tous les champs de l'authentification\n"
+
+#: ../src/gospy_applet.c:2251 ../src/gospy_druid.c:490
+msgid "- The server to monitor\n"
+msgstr "- Le serveur à surveiller\n"
+
+#: ../src/gospy_applet.c:2268 ../src/gospy_druid.c:513
+msgid "- A port to check\n"
+msgstr "- Un port à vérifier\n"
+
+#: ../src/gospy_applet.c:2273 ../src/gospy_druid.c:518
+msgid "- Scan ports format is wrong\n"
+msgstr "- Le format des ports à scanner n'est pas correct\n"
+
+#: ../src/gospy_applet.c:3209
+msgid ""
+"Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>, French\n"
+"Angelo Theodorou <encelo@users.sourceforge.net>, Italian\n"
+"Francisco Javier <ffelix@sshinf.com>, Spanish\n"
+msgstr ""
+"Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>, Français\n"
+"Angelo Theodorou <encelo@users.sourceforge.net>, Italien\n"
+"Francisco Javier <ffelix@sshinf.com>, Espagnol\n"
+
+#: ../src/gospy_applet.c:3222
+msgid "A applet monitoring servers and web pages"
+msgstr "Une applet de surveillance de serveurs et pages web"
+
+#: ../src/gospy_applet.c:3231
+msgid "gospy-applet project page"
+msgstr "Page du projet gospy-applet"
+
+#: ../src/gospy_applet.c:3549 ../src/gospy_druid.c:543
+msgid "Manual"
+msgstr "Manuel"
+
+#: ../src/gospy_applet.c:3549 ../src/gospy_druid.c:543
+#, c-format
+msgid "Every %u minute(s)"
+msgstr "Toutes les %u minute(s)"
+
+#: ../src/gospy_applet.c:3552
+#, c-format
+msgid ""
+"Title : %s\n"
+"Target : %s\n"
+"Scheduling : %s\n"
+"\n"
+"Event : [%s]\n"
+"Process : [%s]\n"
+"State : %s"
+msgstr ""
+"Titre : %s\n"
+"Cible : %s\n"
+"Fréquence : %s\n"
+"\n"
+"Evénement : [%s]\n"
+"Processus : [%s]\n"
+"Etat : %s"
+
+#: ../src/gospy_applet.c:3561
+msgid "Server"
+msgstr "Serveur"
+
+#: ../src/gospy_applet.c:3561
+msgid "Web page"
+msgstr "Page Web"
+
+#: ../src/gospy_applet.c:3563
+msgid "Yes"
+msgstr "Oui"
+
+#: ../src/gospy_applet.c:3563
+msgid "No"
+msgstr "Non"
+
+#: ../src/gospy_applet.c:3565
+msgid "Running"
+msgstr "En cours"
+
+#: ../src/gospy_applet.c:3565
+msgid "Sleeping"
+msgstr "Endormi"
+
+#: ../src/gospy_applet.h:102
+msgid "On <b>%Y-%m-%d</b>"
+msgstr "Le <b>%Y-%m-%d</b>"
+
+#: ../src/gospy_applet.h:103
+msgid "On <b>%Y-%m-%d</b> at <b>%H:%M:%S</b>"
+msgstr "Le <b>%Y-%m-%d</b> à <b>%H:%M:%S</b>"
+
+#: ../src/gospy_applet.h:209
+msgid "Opened,Closed"
+msgstr "Ouvert,Fermé"
+
+#: ../src/gospy_applet.h:217
+msgid "The whole page,BODY,DIV,HEAD,HTML,TITLE,HREF,META"
+msgstr "Toute la page,BODY,DIV,HEAD,HTML,TITLE,HREF,META"
+
+#: ../src/gospy_druid.c:424
+msgid ""
+"Please, enter a identification string for this new Spy\n"
+"\n"
+msgstr ""
+"Veuillez entrer un texte identifiant ce nouvel Espion\n"
+"\n"
+
+#: ../src/gospy_druid.c:550 ../src/gospy_druid.c:558
+#, c-format
+msgid ""
+"TYPE : %s\n"
+"TARGET : %s\n"
+"SCHEDULING : %s\n"
+msgstr ""
+"TYPE : %s\n"
+"CIBLE : %s\n"
+"FRÉQUENCE : %s\n"
+
+#: ../src/gospy_process.c:306
+msgid "Old IP"
+msgstr "Ancienne IP"
+
+#: ../src/gospy_process.c:306
+msgid "New IP"
+msgstr "Nouvelle IP"
+
+#: ../src/gospy_process.c:354
+msgid "Old server"
+msgstr "Ancien serveur"
+
+#: ../src/gospy_process.c:355
+msgid "New server"
+msgstr "Nouveau serveur"
+
+#: ../src/gospy_process.c:431
+msgid "The following alerts have been raised:"
+msgstr "Les alertes suivantes ont été levées:"
+
+#: ../src/gospy_process.c:434
+msgid "SERVER ALERT"
+msgstr "ALERTE SERVEUR"
+
+#: ../src/gospy_process.c:628
+msgid "Old status"
+msgstr "Ancien status"
+
+#: ../src/gospy_process.c:629
+msgid "New status"
+msgstr "Nouveau status"
+
+#: ../src/gospy_process.c:724
+msgid "seconds"
+msgstr "secondes"
+
+#: ../src/gospy_process.c:782
+msgid "Old date"
+msgstr "Ancienne date"
+
+#: ../src/gospy_process.c:782
+msgid "New date"
+msgstr "Nouvelle date"
+
+#: ../src/gospy_process.c:815 ../src/gospy_process.c:861
+#: ../src/gospy_process.c:862
+msgid "bytes"
+msgstr "octets"
+
+#: ../src/gospy_process.c:861
+msgid "Old size"
+msgstr "Ancienne taille"
+
+#: ../src/gospy_process.c:862
+msgid "New size"
+msgstr "Nouvelle taille"
+
+#: ../src/gospy_process.c:1066
+msgid "The following Web alerts have been raised:"
+msgstr "Les alertes Web suivantes ont été levées:"
+
+#: ../src/gospy_process.c:1069
+msgid "WEB PAGE ALERT"
+msgstr "ALERTE PAGE WEB"
+
+#~ msgid "Alerts"
+#~ msgstr "Alertes"
+
+#~ msgid "Changes"
+#~ msgstr "Changements"
+
+#~ msgid " Port found "
+#~ msgstr " Port trouvé "
+
+#, fuzzy
+#~ msgid "None"
+#~ msgstr "Non"
+
+#~ msgid "Creation"
+#~ msgstr "Création"
+
+#~ msgid "Update"
+#~ msgstr "Mise à jour"
+
+#~ msgid "<b>Size</b>"
+#~ msgstr "<b>Taille</b>"
+
+#~ msgid "Items"
+#~ msgstr "Eléments"
+
+#~ msgid "Load"
+#~ msgstr "Chargement"
+
+#~ msgid "Ports"
+#~ msgstr "Ports"
+
+#~ msgid "Scheduler"
+#~ msgstr "Programmateur"
+
+#~ msgid "Size"
+#~ msgstr "Taille: "
+
+#~ msgid "Status"
+#~ msgstr "Statut"
+
+#~ msgid "Remote servers monitoring"
+#~ msgstr "Surveillance de serveurs distants"
+
+#~ msgid ""
+#~ ". The <i>Check for web server update</i> option will only work if the "
+#~ "given server have his web service enabled."
+#~ msgstr ""
+#~ ". L'option <i>Vérifier les mises à jour du serveur web</i> ne "
+#~ "fonctionnera que si le serveur indiqué a un service web actif."
+
+#~ msgid "Basic options"
+#~ msgstr "Options de base"
+
+#~ msgid "Check for changes every"
+#~ msgstr "Mettre à jour toutes les"
+
+#~ msgid "Check for changes every "
+#~ msgstr "Mettre à jour toutes les"
+
+#~ msgid "Execution"
+#~ msgstr "Exécution"
+
+#~ msgid "More options"
+#~ msgstr "Plus d'options"
+
+#~ msgid "translator_credits"
+#~ msgstr ""
+#~ "Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>, "
+#~ "FrançaisAngelo Theodorou <encelo@users.sourceforge.net>, ItalienFrancisco "
+#~ "Javier <ffelix@sshinf.com>, Espagnol"
+
+#~ msgid "When following port is"
+#~ msgstr "Quand le port suivant est"
+
+#, fuzzy
+#~ msgid "Plus d'options..."
+#~ msgstr "Plus d'options..."
+
+#~ msgid "Ports scanner"
+#~ msgstr "Scanner de ports"
+
+#~ msgid "*"
+#~ msgstr "*"

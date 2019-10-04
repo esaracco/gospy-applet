@@ -1,0 +1,14 @@
+Source: gospy-applet
+Section: contrib/misc
+Priority: optional
+Maintainer: Emmanuel Saracco <esaracco@users.labs.libre-entreprise.org>
+Build-Depends: debhelper(>= 4.0.0), autoconf, automake1.9, autotools-dev, gnome-common, intltool (>= 0.30), libtool, libglade2-dev, libglib2.0-dev, libgnet-dev, libgnomeui-dev, libgnutls-dev, libxml2-dev (>= 2.6), pkg-config (>= 0.9.0), libpanel-applet2-dev (>= 2.2.2.1), scrollkeeper, libesmtp-dev (>= 1.0.3)
+Standards-Version: 3.6.1
+
+Package: gospy-applet
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: gspy-applet
+Description: A GNOME 2 applet monitoring changes on Web pages and servers
+ It detects changes in page content, page status, page size, page loading time,
+ IP address and so on.

@@ -1,0 +1,44 @@
+<gconfschemafile>
+<schemalist>
+<schema>
+	<key>/schemas/apps/gospy_applet/prefs/display_main_icon</key>
+	<owner>gospy-applet</owner>
+	<type>bool</type>
+	<default>true</default>
+	<locale name="C">
+		<short>Whether to display or not the main applet icon on the panel.</short>
+		<long>Whether to display or not the main applet icon on the panel.</long>
+	</locale>
+</schema>
+<schema>
+	<key>/schemas/apps/gospy_applet/prefs/display_spies_icons</key>
+	<owner>gospy-applet</owner>
+	<type>bool</type>
+	<default>true</default>
+	<locale name="C">
+		<short>Whether to display or not the spies icons on the panel.</short>
+		<long>Whether to display or not the spies icons on the panel.</long>
+	</locale>
+</schema>
+<schema>
+	<key>/schemas/apps/gospy_applet/prefs/display_tooltips</key>
+	<owner>gospy-applet</owner>
+	<type>bool</type>
+	<default>true</default>
+	<locale name="C">
+		<short>Whether to display or not tooltips when spies are displayed on the gnome panel.</short>
+		<long>Whether to display or not tooltips when spies are displayed on the gnome panel.</long>
+	</locale>
+</schema>
+<schema>
+	<key>/schemas/apps/gospy_applet/prefs/bg_color</key>
+	<owner>gospy-applet</owner>
+	<type>string</type>
+	<default>#2D2AA5</default>
+	<locale name="C">
+		<short>Background applet color.</short>
+		<long>Background applet color.</long>
+	</locale>
+</schema>
+</schemalist>
+</gconfschemafile>
