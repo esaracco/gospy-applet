@@ -4,8 +4,6 @@
 
 # gospy-applet
 
-[Project homepage](https://gospy-applet.esaracco.fr)
-
 gospy-applet is a GNOME applet for monitoring changes on servers and web pages.. You can add a illimited number of sources to monitor. It is possible to detect changes in HTTP header fields, IP associated with domain name, page content, page status, page load time and so on.
 
 ## Installation
